@@ -1,1061 +1,679 @@
 <!DOCTYPE html>
+<!-- 
+Template Name: My Wedding - Wedding Invite Template
+Version: 1.1
+Author: Kamleshyadav
+Website: http://himanshusofttech.com/
+Purchase: http://themeforest.net/user/kamleshyadav
+-->
 <html lang="en">
-   <head>
-      <!-- Metas -->
-      <meta charset="utf-8">
-      <title>DIGIPARA</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Css -->
-      <!-- animation scroll -->
-      <!-- <link href="<?php //echo base_url() ?>assets/scrolling-animation/jquery.parallax.css" type="text/css" rel="stylesheet"> -->
-      <!-- Css bawaan -->
-      <link href="<?php echo base_url() ?>assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-      <link href="<?php echo base_url() ?>assets/css/main.css" rel="stylesheet" type="text/css" media="all" />
-      <link href="<?php echo base_url() ?>assets/css/magnific-popup.css" rel="stylesheet" type="text/css" media="all" />
-      <link href="<?php echo base_url() ?>assets/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-      <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700" rel="stylesheet">
-      <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-   </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Wedding - Wedding Invite Template</title>
+    <link href="<?php echo base_url() ?>assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>assets/images/favicon.png" />
+    <link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/images/favicon.png" />
+</head>
 
+<body>
+    <!-- Preloader-->
+	<div id="preloader">
+        <div id="status">
+            <img src="<?php echo base_url() ?>assets/images/wedding-loading.gif" alt="" />
+        </div>
+    </div> 
+    <!-- Main Section -->
+    <div class="wd_main_container">
+        <section class="bubble-header">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+            </div>
+            <div class="wd_img_overlay text-center">
+                <img src="<?php echo base_url() ?>assets/images/Heart.svg" alt="" class="wd_svg_response" />
+                <div class="wd_responsive">
+                    <div class="container">
+                        <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
+                            <h1>Christene & William</h1>
+                            <h2>Getting Married</h2>
+                            <h4><span class="fa fa-calendar"></span>31st Dec 2016</h4>
+                            <div class="wd_scroll_wrapper onclick_show_site">
+                                <p>Click Below</p>
+                                <div class="wd_scroll">
+                                    <a href="#">|</a>
+                                </div>
+                            </div>
 
-   <body >
-      <!-- Preloader -->
-      <div class="loader">
-         <!-- Preloader inner -->
-         <div class="loader-inner">
-            <svg width="120" height="220" viewbox="0 0 100 100" class="loading-spinner" version="1.1" xmlns="http://www.w3.org/2000/svg">
-               <circle class="spinner" cx="50" cy="50" r="21" fill="#ffffff" stroke-width="2" />
-            </svg>
-         </div>
-         <!-- End preloader inner -->
-      </div>
-      <!-- End preloader-->
-      <!--Wrapper-->
-      <div  class="wrapper">
-         <!--Header-->
-         <header class="header switched-header" >
-            <div class="header-section">
-               <!--Container-->
-               <div  class="container-fluid" >
-                  <nav class="navbar navbar-expand-lg header-navbar ml-0 ml-lg-5"  >
-                     <a class=" navbar-brand navbar-logo scroll" href="#wrapper">
-                     <img class="mb-0 logo-light" src="<?php echo base_url() ?>assets/assets/svg/logo-light.svg" alt="">
-                     <img class="mb-0 logo-dark" src="<?php echo base_url() ?>assets/assets/svg/logo-dark.svg" alt="">
-                     </a>
-                     <button class="navbar-toggler btn-navbar-toggler" type="button" data-toggle="collapse" data-target=".nav-menu" aria-expanded="true" aria-label="Toggle navigation">
-                     <span class="fa fa-bars"></span>
-                     </button>
-                     <div class="nav-menu collapse navbar-collapse navbar-collapse justify-content-end mr-5 ">
-                        <ul class=" navbar-nav  header-navbar-nav">
-                           <li><a class=" nav-link scroll" href="#resto">Date</a></li>
-                           <li><a class=" nav-link scroll" href="#story">Love Story</a></li>
-                           <li><a class=" nav-link scroll" href="#wedding">Wedding</a></li>
-                           <li><a class=" nav-link scroll" href="#gallery">Gallery</a></li>
-                           <!-- <li><a class=" nav-link scroll" href="#gift">Gift Registry</a></li> -->
-                           <!-- <li><a class=" nav-link scroll" href="#friends">Friends</a></li> -->
-                           <li><a class=" nav-link scroll" href="#rsvp">Rsvp</a></li>
-                           <li><a class=" nav-link scroll" href="#location">Location</a></li>
+                            <!-- <a href="#" class=""><i class="fa fa-long-arrow-down"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Main Section end -->
+    <!-- Site content start -->
+    <div class="page">
+        <span class="menu_toggle">
+    <i class="menu_open fa fa-bars fa-lg"></i>
+    <i class="menu_close fa fa-times fa-lg"></i>
+  </span>
+        <ul class="menu_items">
+            <li><a class="page-scroll active" href='#1'><i class="icon fa fa-heart fa-2x"></i>Home</a></li>
+            <li><a class="page-scroll" href='#2'><i class="icon fa fa-heart fa-2x"></i>Love Story</a></li>
+            <li><a class="page-scroll" href='#3'><i class="icon fa fa-heart fa-2x"></i>Wedding</a></li>
+            <li><a class="page-scroll" href='#4'><i class="icon fa fa-heart fa-2x"></i>Gallery</a></li>
+            <li><a class="page-scroll" href='#5'><i class="icon fa fa-heart fa-2x"></i>RSVP</a></li>
+            <li><a class="page-scroll" href='#6'><i class="icon fa fa-heart fa-2x"></i>Location</a></li>
+        </ul>
+        <div class="content">
+            <div class="content_inner">
+                <div class="rev_slider_wrapper" id="1">
+                    <div class="ws_counter">
+                        <div class="clock1"></div>
+                    </div>
+                    <!-- START REVOLUTION SLIDER 5.0 auto mode -->
+                    <div id="rev_slider" class="rev_slider" data-version="5.0">
+                        <ul>
+                            <!-- SLIDE  -->
+                            <li data-transition="fade">
+							<img src="http://placehold.it/1600x768"  alt=""></li>
+							<!-- SLIDE  -->
+							<li data-transition="fade">
+								<img src="http://placehold.it/1600x768"  alt="">
+							</li>
+							<!-- SLIDE  -->
+							<li data-transition="fade">
+								<img src="http://placehold.it/1600x768"  alt="">
+							</li>
+							<!-- SLIDE  -->
+							<li data-transition="fade">
+								<img src="http://placehold.it/1600x768"  alt="">
+							</li>
                         </ul>
-                     </div>
-                  </nav>
-               </div>
-               <!--End container-->
-            </div>
-         </header>
-         <!--End header-->
-         <!-- <div id="animasi"> -->
-         <!--Hero section-->
-         <section class="gradient-overlay gradient-overlay-dark" data-aos="zoom-in">
-            <img class="bg-image" src="<?php echo base_url() ?>assets/assets/img/1.jpg" alt="">
-            <div class="container" >
-               <!--row-->
-               <div class="row min-vh-80 align-items-center z-index-2 position-relative text-center" >
-                  <div class="col-12">
-                     <h1 class="display-2  text-white mb-4">Jena &amp; Mike</h1>
-                     <p class="font-weight-300 text-light  lead mb-5 ">Saturday May 10th, 2017 - 28 Chalmers Street, Sydney. </p>
-                     <a href="#rsvp" class="btn btn-primary btn-wide-sm btn-sm  scroll">RSVP</a>
-                  </div>
-               </div>
-               <!--End row-->
-            </div>
-            <!--End container-->
-            <div class="curved-decoration ">
-              <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    viewBox="0 0 2560 168.6227" enable-background="new 0 0 2560 168.6227" xml:space="preserve">
-<g>
-</g>
-<g>
-   <path d="M2560,0c0,0-219.6543,165.951-730.788,124.0771c-383.3156-31.4028-827.2138-96.9514-1244.7139-96.9514
-      c-212.5106,0-439,3.5-584.4982,1.5844l0,139.9126h2560V0z"/>
-</g>
-</svg>
-            </div>
-         </section>
-         <!--End hero section-->
-         <!--Date section-->
-         <section id="resto" data-aos="fade-down">
-            <div class="container spacer-double-lg" >
-               <div class="row justify-content-lg-between align-items-center" data-rate="0.2" data-effect="zoom" data-func="custom_show">
-                  <div class="col-md-6 mb-5 mb-md-0">
-                     <div class="pr-md-4">
-                        <h1 class="font-secondary display-4">Save the date</h1>
-                        <p class="lead font-weight-300 text-dark-gray opacity-8">Saturday May 10th, 2017 - 28 Chalmers Street, Sydney.</p>
-                        <p class="mb-4 pr-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occae.</p>
-                        <div class="countdown row text-center"></div>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="svg-mask-container">
-                        <svg version="1.1" id="p.svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 980.2914 884.5557" enable-background="new 0 0 980.2914 884.5557" xml:space="preserve">
-                           <path opacity="0.05" fill="#E35D5D" d="M493.9887,130.1238L493.9887,130.1238C419.5373,4.797,257.8407-37.3296,131.6182,36.1312
-                              C4.3062,110.2269-37.5245,274.4576,36.6059,401.6698l215.8423,370.3983c28.1165,48.2495,90.0233,64.5706,138.2729,36.4541
-                              l368.4115-214.6845c127.2958-74.1791,172.7084-240.1479,98.7059-367.5465C783.976,99.1337,621.0024,56.1091,493.9887,130.1238z" />
-                           <path fill="none" stroke="#E35D5D" stroke-width="3.1978" stroke-miterlimit="10" d="M151.0414,716.6817L151.0414,716.6817
-                              c-2.6854-4.5204-8.5175-6.0399-13.0702-3.3902c-4.592,2.6725-6.1008,8.5961-3.427,13.1844l7.7851,13.3598
-                              c1.0141,1.7403,3.247,2.3289,4.9873,1.3148l13.2881-7.7433c4.5914-2.6756,6.2294-8.6618,3.5602-13.257
-                              C161.5008,715.5639,155.6226,714.0121,151.0414,716.6817z" />
-                           <path fill="none" stroke="#E35D5D" stroke-width="2.7402" stroke-miterlimit="10" d="M186.6779,44.1803L186.6779,44.1803
-                              c-1.4613-2.4599-4.635-3.2867-7.1125-1.8449c-2.4988,1.4543-3.3199,4.6778-1.8649,7.1747l4.2365,7.2701
-                              c0.5519,0.947,1.767,1.2674,2.714,0.7155l7.2311-4.2138c2.4985-1.456,3.3899-4.7136,1.9374-7.2141
-                              C192.3697,43.572,189.1709,42.7276,186.6779,44.1803z" />
-                           <path fill="none" stroke="#E35D5D" stroke-width="2.5752" stroke-miterlimit="10" d="M978.3951,400.8979
-                              c-0.5042,0.934-0.5042,2.0591,0,2.993c0.3052,0.4453,0.5839,0.9083,0.835,1.3862c0.5513,1.3705-0.4096,2.8669-1.3862,3.9854
-                              c-0.6144,0.7089-1.3075,1.6697-0.8979,2.5203c0.1919,0.3133,0.4371,0.5904,0.7246,0.8192c2.0887,2.0325,2.1343,5.3734,0.1018,7.4622
-                              c-0.5895,0.6058-1.3159,1.0612-2.1182,1.3277" />
-                           <defs>
-                              <mask id="mask">
-                                 <path fill="#ffffff" d="M528.4855,192.3897L528.4855,192.3897C454.034,67.0629,292.3375,24.9363,166.115,98.3971
-                                    C38.8029,172.4928-3.0277,336.7236,71.1027,463.9358L286.945,834.3341c28.1165,48.2495,90.0233,64.5706,138.2729,36.4541
-                                    l368.4115-214.6845c127.2958-74.1792,172.7084-240.1479,98.7059-367.5465C818.4728,161.3996,655.4992,118.375,528.4855,192.3897z" />
-                              </mask>
-                           </defs>
-                           <image mask="url(#mask)" width="981" height="885" xlink:href="<?php echo base_url() ?>assets/assets/img/mask-lg.jpg" />
-                           <g>
-                              <path fill="none" stroke="#E35D5D" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" d="M747.8805,524.349
-                                 c108.1955-68.637,139.1927-213.677,70.5558-321.8725S606.4696,62.2462,498.2741,130.8832l0,0" />
-                           </g>
-                        </svg>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="curved-decoration">
-<svg  width="100%" height="100%" class="bg-secondary-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    viewBox="0 0 2560 168.6227" enable-background="new 0 0 2560 168.6227" xml:space="preserve">
-<g>
-</g>
-<g>
-   <path d="M0,0c0,0,219.6543,165.951,730.788,124.0771c383.3156-31.4028,827.2139-96.9514,1244.7139-96.9514
-      c212.5106,0,438.9999,3.5,584.4982,1.5844v139.9126H0V0z"/>
-</g>
-</svg>
-            </div>
-         </section>
-         <!--End date section-->
-         <section id="story" class="bg-secondary spacer-one-top-lg" data-aos="flip-up">
-            <!--Container-->
-            <div class="container spacer-one-bottom-lg" >
-               <!--Row-->
-               <div class="row justify-content-center">
-                  <div class="col">
-                     <div class=" text-center mb-5 pb-5">
-                        <h1 class="display-4 mb-0">Our Love Story</h1>
-                        <p class="w-md-40 mb-0 mx-auto text-dark-gray opacity-8 ">The Story of our love and the Wedding</p>
-                     </div>
-                  </div>
-               </div>
-               <!--End row-->
-               <div class="row  justify-content-center">
-                  <div class="col-lg-12 text-center">
-                     <div class="mb-3 pb-3">
-                        <h5 class="mb-0"> When Jena Miller Met Mike Shneider</h5>
-                        <span class="small text-dark-gray opacity-8">That day changed everything</span>
-                     </div>
-                  </div>
-                  <div class="col-md-3 d-flex flex-column align-items-center">
-                     <div class="mb-3 pb-3 px-4">
-                        <div class="svg-mask-container">
-                           <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 607 532" enable-background="new 0 0 607 532" xml:space="preserve">
-                              <defs>
-                                 <mask id="mask-small-1">
-                                    <path fill="#FFFFFF" d="M303.2954,55.7655L303.2954,55.7655c-68.9887-68.3032-180.269-68.3601-249.3155,0.1402
-                                       c-69.6423,69.0921-69.0838,181.9562,0.0139,251.5284l201.1888,202.5704c26.2076,26.3876,68.8445,26.5335,95.2321,0.3258
-                                       l201.4838-200.1096c69.6179-69.1431,71.0768-183.7278,2.0303-253.4415C485.013-12.8027,372.7591-13.2244,303.2954,55.7655z" />
-                                 </mask>
-                              </defs>
-                              <image mask="url(#mask-small-1)" width="607" height="532" xlink:href="<?php echo base_url() ?>assets/assets/img/mask-md.jpg" />
-                           </svg>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col d-flex flex-column align-items-center">
-                     <ol class="story mb-0">
-                        <li>
-                           <div class="story-icon bg-icon-primary">
-                              <svg version="1.1" class="icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 107 93" enable-background="new 0 0 107 93" xml:space="preserve">
-                                 <path fill="#E25D5D" d="M53.6825,9.4436L53.6825,9.4436C41.6532-2.4793,22.2392-2.5,10.1866,9.4439
-                                    c-12.1565,12.0471-12.07,31.7375-0.0219,43.8819l35.08,35.3601c4.5697,4.6061,12.0081,4.6357,16.6142,0.0661l35.1704-34.8918
-                                    c12.1523-12.056,12.4179-32.0464,0.3787-44.2154C85.3917-2.5013,65.8078-2.5857,53.6825,9.4436z" />
-                              </svg>
-                           </div>
-                           <div>
-                              <h5 class="mb-0">First met</h5>
-                              <span class="small text-primary">October 2016</span>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="story-icon bg-icon-primary">
-                              <svg version="1.1" class="icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 107 93" enable-background="new 0 0 107 93" xml:space="preserve">
-                                 <path fill="#E25D5D" d="M53.6825,9.4436L53.6825,9.4436C41.6532-2.4793,22.2392-2.5,10.1866,9.4439
-                                    c-12.1565,12.0471-12.07,31.7375-0.0219,43.8819l35.08,35.3601c4.5697,4.6061,12.0081,4.6357,16.6142,0.0661l35.1704-34.8918
-                                    c12.1523-12.056,12.4179-32.0464,0.3787-44.2154C85.3917-2.5013,65.8078-2.5857,53.6825,9.4436z" />
-                              </svg>
-                           </div>
-                           <div>
-                              <h5 class="mb-0">First Dating</h5>
-                              <span class="small text-primary">April 2017</span>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="story-icon bg-icon-primary">
-                              <svg  version="1.1" class="icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 107 93" enable-background="new 0 0 107 93" xml:space="preserve">
-                                 <path fill="#E25D5D" d="M53.6825,9.4436L53.6825,9.4436C41.6532-2.4793,22.2392-2.5,10.1866,9.4439
-                                    c-12.1565,12.0471-12.07,31.7375-0.0219,43.8819l35.08,35.3601c4.5697,4.6061,12.0081,4.6357,16.6142,0.0661l35.1704-34.8918
-                                    c12.1523-12.056,12.4179-32.0464,0.3787-44.2154C85.3917-2.5013,65.8078-2.5857,53.6825,9.4436z" />
-                              </svg>
-                           </div>
-                           <div>
-                              <h5 class="mb-0">Love began</h5>
-                              <span class="small text-primary">October 2017</span>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="story-icon bg-icon-primary">
-                              <svg version="1.1" class="icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 107 93" enable-background="new 0 0 107 93" xml:space="preserve">
-                                 <path fill="#E25D5D" d="M53.6825,9.4436L53.6825,9.4436C41.6532-2.4793,22.2392-2.5,10.1866,9.4439
-                                    c-12.1565,12.0471-12.07,31.7375-0.0219,43.8819l35.08,35.3601c4.5697,4.6061,12.0081,4.6357,16.6142,0.0661l35.1704-34.8918
-                                    c12.1523-12.056,12.4179-32.0464,0.3787-44.2154C85.3917-2.5013,65.8078-2.5857,53.6825,9.4436z" />
-                              </svg>
-                           </div>
-                           <div>
-                              <h5 class="mb-0">Together since</h5>
-                              <span class="small text-primary">February 2018</span>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="story-icon bg-icon-primary">
-                              <svg version="1.1" class="icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 107 93" enable-background="new 0 0 107 93" xml:space="preserve">
-                                 <path fill="#E25D5D" d="M53.6825,9.4436L53.6825,9.4436C41.6532-2.4793,22.2392-2.5,10.1866,9.4439
-                                    c-12.1565,12.0471-12.07,31.7375-0.0219,43.8819l35.08,35.3601c4.5697,4.6061,12.0081,4.6357,16.6142,0.0661l35.1704-34.8918
-                                    c12.1523-12.056,12.4179-32.0464,0.3787-44.2154C85.3917-2.5013,65.8078-2.5857,53.6825,9.4436z" />
-                              </svg>
-                           </div>
-                           <div>
-                              <h5 class="mb-0">He proposed</h5>
-                              <span class="small text-primary">September 2018</span>
-                           </div>
-                        </li>
-                     </ol>
-                  </div>
-               </div>
-               <div class="row  justify-content-center">
-                  <div class="col-md-3 d-flex flex-column align-items-center">
-                     <div class="mb-3 pb-3 mt-3 pt-3 px-4">
-                        <div class="svg-mask-container">
-                           <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 607 532" enable-background="new 0 0 607 532" xml:space="preserve">
-                              <defs>
-                                 <mask id="mask-small-2">
-                                    <path fill="#FFFFFF" d="M303.2954,55.7655L303.2954,55.7655c-68.9887-68.3032-180.269-68.3601-249.3155,0.1402
-                                       c-69.6423,69.0921-69.0838,181.9562,0.0139,251.5284l201.1888,202.5704c26.2076,26.3876,68.8445,26.5335,95.2321,0.3258
-                                       l201.4838-200.1096c69.6179-69.1431,71.0768-183.7278,2.0303-253.4415C485.013-12.8027,372.7591-13.2244,303.2954,55.7655z" />
-                                 </mask>
-                              </defs>
-                              <image mask="url(#mask-small-2)" width="607" height="532" xlink:href="<?php echo base_url() ?>assets/assets/img/mask-md.jpg" />
-                           </svg>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-12 text-center">
-                     <div class="">
-                        <h5 class="mb-0"> Happy ending we will get married</h5>
-                        <span class="small text-dark-gray opacity-8">Counting the days...</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <!--End container-->
-            <div class="curved-decoration ">
-               <svg width="100%" height="100%" class="bg-white-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    viewBox="0 0 2560 168.6227" enable-background="new 0 0 2560 168.6227" xml:space="preserve">
-<g>
-</g>
-<g>
-   <path d="M2560,0c0,0-219.6543,165.951-730.788,124.0771c-383.3156-31.4028-827.2138-96.9514-1244.7139-96.9514
-      c-212.5106,0-439,3.5-584.4982,1.5844l0,139.9126h2560V0z"/>
-</g>
-</svg>
-            </div>
-         </section>
-         <section id="wedding" class="spacer-one-top-lg" data-aos="fade-left">
-            <!--Container-->
-            <div class="container spacer-one-bottom-lg">
-               <!--Row-->
-               <div class="row justify-content-center">
-                  <div class="col">
-                     <div class=" text-center mb-5 pb-5">
-                        <h1 class="display-4 mb-0">Wedding Events</h1>
-                        <p class="w-md-40 mb-0 mx-auto text-dark-gray opacity-8 ">Main ceremony - Wedding party</p>
-                     </div>
-                  </div>
-               </div>
-               <!--End row-->
-               <!--Row-->
-               <div class="row">
-                  <div class="col-md-6 col-lg-4 d-flex mb-4 mb-lg-0 display-state ">
-                     <div class="card card-icon-2 card-body justify-content-between">
-                        <img class="bg-image" src="<?php echo base_url() ?>assets/assets/img/1.jpg" alt="">
-                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4 d-flex mb-4 mb-lg-0">
-                     <div class="card card-body justify-content-between">
-                        <div class="icon-round mb-5 mb-md-5  bg-icon-primary">
-                           <svg class="icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 156.016 144" enable-background="new 0 0 156.016 144" xml:space="preserve">
-                              <g>
-                                 <g>
-                                    <g>
-                                       <path fill="#E25D5D" d="M46.0314,41.7797l-2.7211-2.7211c-1.0296-1.0296-2.6989-1.0296-3.7282,0
-                                          c-1.0296,1.0296-1.0296,2.6986,0,3.7282l2.7211,2.7211c0.5147,0.515,1.1896,0.7722,1.864,0.7722
-                                          c0.6743,0,1.3496-0.2572,1.864-0.7722C47.0611,44.4783,47.0611,42.8093,46.0314,41.7797z" />
-                                    </g>
-                                 </g>
-                                 <g>
-                                    <g>
-                                       <path fill="#E25D5D" d="M45.5076,109.9846c-1.029-1.0296-2.6983-1.0296-3.7282,0l-2.0709,2.0706
-                                          c-1.0296,1.0296-1.0296,2.6989,0,3.7285c0.5147,0.515,1.1896,0.7722,1.864,0.7722c0.6743,0,1.3496-0.2572,1.864-0.7722
-                                          l2.0709-2.0703C46.5372,112.6834,46.5372,111.0142,45.5076,109.9846z" />
-                                    </g>
-                                 </g>
-                                 <g>
-                                    <g>
-                                       <g>
-                                          <path fill="#E25D5D" d="M108.9037,65.5264H90.4893V47.7202c0-1.4559-1.1799-2.6364-2.6364-2.6364H68.1625
-                                             c-1.4559,0-2.6364,1.1805-2.6364,2.6364v17.8062H47.1113c-1.4559,0-2.6364,1.1805-2.6364,2.6364v19.69
-                                             c0,1.456,1.1805,2.6364,2.6364,2.6364h18.4148v50.8743c0,1.4559,1.1805,2.6364,2.6364,2.6364h19.6903
-                                             c1.4562,0,2.6364-1.1805,2.6364-2.6364v-31.784c0-1.4559-1.1799-2.6364-2.6364-2.6364c-1.4566,0-2.6364,1.1805-2.6364,2.6364
-                                             v29.1476H70.7986V87.8528c0-1.4559-1.1805-2.6364-2.6364-2.6364H49.7474V70.7992h18.4148c1.4559,0,2.6364-1.1805,2.6364-2.6364
-                                             V50.3566h14.4178v17.8062c0,1.4559,1.1799,2.6364,2.6364,2.6364h18.4145v14.4175H87.8528c-1.4563,0-2.6364,1.1805-2.6364,2.6364
-                                             v13.759c0,1.4559,1.1799,2.6364,2.6364,2.6364c1.4566,0,2.6364-1.1805,2.6364-2.6364V90.4896h18.4145
-                                             c1.4562,0,2.6364-1.1805,2.6364-2.6364v-19.69C111.5401,66.7069,110.36,65.5264,108.9037,65.5264z" />
-                                       </g>
-                                    </g>
-                                    <g opacity="0.3">
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M78.3782,0c-1.4559,0-2.6364,1.1805-2.6364,2.6364v27.1434c0,1.4559,1.1805,2.6364,2.6364,2.6364
-                                                c1.4563,0,2.6364-1.1805,2.6364-2.6364V2.6364C81.0146,1.1802,79.8348,0,78.3782,0z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M153.3795,75.7418h-10.9263c-1.4562,0-2.6364,1.1805-2.6364,2.6364
-                                                c0,1.4559,1.1802,2.6364,2.6364,2.6364h10.9263c1.4563,0,2.6364-1.1805,2.6364-2.6364
-                                                C156.016,76.9223,154.8355,75.7418,153.3795,75.7418z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M135.1888,75.7418h-8.9526c-1.4562,0-2.6364,1.1805-2.6364,2.6364
-                                                c0,1.4559,1.1802,2.6364,2.6364,2.6364h8.9526c1.4562,0,2.6364-1.1805,2.6364-2.6364
-                                                C137.8252,76.9223,136.645,75.7418,135.1888,75.7418z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M133.4302,23.1099c-1.03-1.0296-2.6989-1.0296-3.7285,0l-19.1933,19.1933
-                                                c-1.0296,1.0296-1.0296,2.6986,0,3.7282c0.5147,0.515,1.1896,0.7722,1.864,0.7722c0.6746,0,1.3496-0.2572,1.8646-0.7722
-                                                l19.1933-19.1933C134.4599,25.8085,134.4599,24.1389,133.4302,23.1099z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M37.6864,33.434l-10.848-10.848c-1.0293-1.0296-2.6986-1.0296-3.7282,0
-                                                c-1.0296,1.0296-1.0296,2.6986,0,3.7282l10.848,10.848c0.5147,0.515,1.1896,0.7722,1.864,0.7722
-                                                c0.6743,0,1.3496-0.2572,1.864-0.7722C38.716,36.1326,38.716,34.4637,37.6864,33.434z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M29.7799,75.0013H2.6364C1.1805,75.0013,0,76.1818,0,77.6378c0,1.4559,1.1805,2.6364,2.6364,2.6364
-                                                h27.1434c1.4559,0,2.6364-1.1805,2.6364-2.6364C32.4163,76.1818,31.2358,75.0013,29.7799,75.0013z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M36.8758,118.6163c-1.0293-1.0293-2.6986-1.0296-3.7282,0l-10.5612,10.5612
-                                                c-1.0296,1.0296-1.0296,2.6986,0,3.7282c0.5147,0.515,1.1896,0.7722,1.864,0.7722s1.3496-0.2572,1.864-0.7722l10.5612-10.5612
-                                                C37.9055,121.3149,37.9055,119.646,36.8758,118.6163z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M132.9067,129.7014l-19.1936-19.1933c-1.03-1.0293-2.6989-1.0296-3.7285,0
-                                                c-1.0296,1.0296-1.0296,2.6986,0,3.7282l19.1933,19.1933c0.515,0.515,1.1896,0.7722,1.8643,0.7722s1.3496-0.2572,1.8646-0.7722
-                                                C133.9363,132.4,133.9363,130.7307,132.9067,129.7014z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M62.3311,32.3014l-6.4067-15.4602c-0.557-1.345-2.0998-1.9837-3.4448-1.4264
-                                                c-1.3453,0.5576-1.9837,2.0995-1.4264,3.4448l6.4067,15.4602c0.4208,1.015,1.4023,1.6278,2.4368,1.6278
-                                                c0.3364,0,0.6783-0.0646,1.008-0.2014C62.2498,35.1889,62.8881,33.6467,62.3311,32.3014z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M140.6036,52.4826c-0.5576-1.3453-2.0992-1.9843-3.4448-1.4267l-15.4599,6.4027
-                                                c-1.345,0.557-1.9843,2.0992-1.4273,3.4445c0.4208,1.0156,1.4023,1.6281,2.4371,1.6281c0.3361,0,0.678-0.0646,1.0077-0.2014
-                                                l15.4599-6.4027C140.5213,55.3698,141.1606,53.8279,140.6036,52.4826z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M104.2208,15.6942c-1.3438-0.5567-2.8869,0.0811-3.4445,1.4264l-6.4067,15.4639
-                                                c-0.557,1.3453,0.0817,2.8878,1.4267,3.4448c0.3297,0.1368,0.6713,0.2014,1.0077,0.2014c1.0345,0,2.016-0.6128,2.4368-1.6278
-                                                l6.4067-15.4639C106.2051,17.7937,105.5664,16.2519,104.2208,15.6942z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M34.5999,56.774l-15.4602-6.4031c-1.345-0.5567-2.8872,0.0817-3.4445,1.4267
-                                                c-0.557,1.3453,0.082,2.8872,1.427,3.4445l15.4602,6.4031c0.3297,0.1368,0.6713,0.2014,1.0077,0.2014
-                                                c1.0345,0,2.0163-0.6131,2.4368-1.6281C36.5842,58.8732,35.9455,57.331,34.5999,56.774z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M35.7441,95.114c-0.557-1.3453-2.0998-1.984-3.4448-1.4267L16.843,100.09
-                                                c-1.3453,0.557-1.984,2.0995-1.4267,3.4445c0.4208,1.0153,1.4023,1.6281,2.4368,1.6281c0.3364,0,0.678-0.0646,1.008-0.2014
-                                                l15.4562-6.4027C35.6624,98.0015,36.3011,96.4593,35.7441,95.114z" />
-                                          </g>
-                                       </g>
-                                       <g>
-                                          <g>
-                                             <path fill="#E25D5D" d="M138.8941,100.7756l-15.4599-6.4067c-1.3441-0.5567-2.8872,0.0808-3.4448,1.4261
-                                                c-0.5576,1.3453,0.0807,2.8872,1.4264,3.4448l15.4599,6.4067c0.3297,0.1368,0.6716,0.2014,1.008,0.2014
-                                                c1.0342,0,2.016-0.6128,2.4368-1.6278C140.8775,102.8752,140.2395,101.333,138.8941,100.7756z" />
-                                          </g>
-                                       </g>
-                                    </g>
-                                 </g>
-                              </g>
-                           </svg>
-                        </div>
-                        <h5 class="mb-0">Main Ceremony</h5>
-                        <h6 class="mb-5">16:00h - 17:00</h6>
-                        <p class="text-align-center">Hôtel Monaco
-                           <br>501 Route de Geary
-                           <br>San Franciscio
-                           <br>(415) 292 - 0100
-                        </p>
-                     </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4 d-flex ">
-                     <div class="card card-body justify-content-between bg-primary text-light">
-                        <div class="icon-round mb-3 mb-md-5  bg-icon-white">
-                           <svg class="icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 460" enable-background="new 0 0 512 460;" xml:space="preserve">
-                              <g>
-                                 <g>
-                                    <path fill="#FFFFFF" d="M240.8,110.7c-0.1-4.5-3.1-8.3-7.4-9.4L138,76.1c0,0,0,0,0,0L102,66.7c-4.3-1.1-8.8,0.7-11.1,4.4
-                                       c-14.4,23.3-25.7,49.3-32.7,75.1c-11.7,43-9.7,79.9,5.7,106.7c9,15.5,22.1,26.9,38.3,33.4L65.6,421.3l-53-14
-                                       c-5.3-1.4-10.8,1.8-12.2,7.1c-1.4,5.3,1.8,10.8,7.1,12.2c0,0,62.5,16.5,62.5,16.5c0,0,62.7,16.5,62.7,16.5
-                                       c0.9,0.2,1.7,0.3,2.6,0.3c4.4,0,8.5-3,9.7-7.5c1.4-5.3-1.8-10.8-7.1-12.2l-52.9-13.9l36.8-135c3.6,0.5,7.2,0.8,10.8,0.8
-                                       c44.6,0,81.4-37.5,98.5-100.3C238,166.1,241.4,138,240.8,110.7z M211.7,186.6c-14.6,53.6-44.2,85.5-79.2,85.5
-                                       c-5.1,0-10.3-0.7-15.4-2c-15.4-4.1-27.8-13.5-35.7-27.2c-9.4-16.3-12.6-37.8-9.5-63.1c13.4,2.2,26,3,37.9,3
-                                       c19.7,0,37.6-2.2,54.2-4.3c18.8-2.3,35.5-4.4,50.3-2.5C213.5,179.5,212.6,183.1,211.7,186.6z M218,156.3
-                                       c-17.7-2.4-36.6-0.1-56.4,2.4c-25.3,3.1-53.7,6.6-86.2,1.4c0.7-2.9,1.4-5.7,2.2-8.7c5.9-21.6,15.1-43.4,26.6-63.5l15.9,4.2
-                                       c-2.9,5.6-5.5,11.3-7.6,15.9c-2.2,5,0,11,5.1,13.2c1.3,0.6,2.7,0.9,4.1,0.9c3.8,0,7.5-2.2,9.1-5.9c3.2-7.3,6.4-13.7,9.2-18.8
-                                       l80.9,21.3C220.8,131.2,219.8,143.9,218,156.3z" />
-                                 </g>
-                              </g>
-                              <g opacity="0.3">
-                                 <g>
-                                    <path fill="#FFFFFF" d="M256,0c-5.5,0-10,4.5-10,10v26.1c0,5.5,4.5,10,10,10c5.5,0,10-4.5,10-10V10C266,4.5,261.5,0,256,0z" />
-                                 </g>
-                              </g>
-                              <g opacity="0.3">
-                                 <g>
-                                    <path fill="#FFFFFF" d="M223.6,49l-13.2-22.6c-2.8-4.8-8.9-6.4-13.7-3.6c-4.8,2.8-6.4,8.9-3.6,13.7l13.2,22.6
-                                       c1.9,3.2,5.2,4.9,8.6,4.9c1.7,0,3.5-0.4,5.1-1.4C224.8,59.9,226.4,53.8,223.6,49z" />
-                                 </g>
-                              </g>
-                              <g opacity="0.3">
-                                 <g>
-                                    <path fill="#FFFFFF" d="M315.3,22.9c-4.8-2.8-10.9-1.2-13.7,3.6L288.4,49c-2.8,4.8-1.2,10.9,3.6,13.7c1.6,0.9,3.3,1.4,5,1.4
-                                       c3.4,0,6.8-1.8,8.6-4.9l13.2-22.6C321.7,31.8,320.1,25.7,315.3,22.9z" />
-                                 </g>
-                              </g>
-                              <g opacity="0.3">
-                                 <g>
-                                    <path fill="#FFFFFF" d="M408.6,120.7C408.6,120.7,408.6,120.7,408.6,120.7c-1.7-5.3-7.2-8.2-12.5-6.7c-5.3,1.6-8.3,7.2-6.7,12.5
-                                       c0,0.1,0,0.2,0.1,0.2c1.4,4.3,5.3,7,9.5,7c1,0,2-0.1,3-0.5C407.3,131.6,410.2,126,408.6,120.7z" />
-                                 </g>
-                              </g>
-                              <g opacity="0.3">
-                                 <g>
-                                    <circle fill="#FFFFFF" cx="110" cy="138" r="10" />
-                                 </g>
-                              </g>
-                              <g>
-                                 <g>
-                                    <g>
-                                       <path fill="#FFFFFF" d="M442,443.1C442,443.1,442,443.1,442,443.1l-62.2,16.4C385.7,458,442,443.1,442,443.1z" />
-                                       <path fill="#FFFFFF" d="M379.8,459.5c-0.3,0.1-0.5,0.1-0.5,0.1L379.8,459.5z" />
-                                       <path fill="#FFFFFF" d="M511.7,414.4c-1.4-5.3-6.9-8.5-12.2-7.1l-53,14l-36.8-135.1c16.2-6.5,29.4-17.9,38.3-33.4
-                                          c15.5-26.8,17.5-63.7,5.8-106.7c-7-25.8-18.3-51.7-32.7-75.1c-2.3-3.7-6.8-5.5-11.1-4.4l-131.3,34.6c-4.3,1.1-7.3,5-7.4,9.4
-                                          c-0.5,24.6,2.2,49.7,7.8,73.3c0.1,0.3,0.1,0.7,0.2,1c0.6,2.3,1.1,4.6,1.8,6.8c17.1,62.8,53.9,100.3,98.5,100.3c0,0,0,0,0,0
-                                          c3.6,0,7.2-0.3,10.8-0.8l36.8,135l-52.9,13.9c-5.3,1.4-8.5,6.9-7.1,12.2c1.2,4.5,5.2,7.5,9.7,7.5c0.8,0,1.7-0.1,2.6-0.3
-                                          l62.7-16.5c0,0,0,0,0,0l62.5-16.5C509.9,425.2,513.1,419.8,511.7,414.4z M291.2,118.7l116.6-30.8c11.6,20,20.8,41.8,26.6,63.5
-                                          c1.7,6.3,3.1,12.4,4.2,18.3c-6.1-0.6-12.3-0.7-18.6-0.4c-1.1-7.3-2.7-15-4-20.9c-1.2-5.4-6.6-8.8-12-7.5c-5.4,1.2-8.8,6.6-7.5,12
-                                          c1.5,6.7,2.7,12.8,3.5,18.1c-4.5,0.5-9.1,1.1-13.7,1.7c-26,3.3-55.2,7-89.1,1C293.3,155.8,291.3,137.1,291.2,118.7z M379.5,272.1
-                                          C379.5,272.1,379.5,272.1,379.5,272.1c-33.2,0-61.6-28.8-76.8-77.4c11.1,1.5,21.8,2.2,31.9,2.2c19.7,0,37.6-2.3,54.2-4.4
-                                          c19.6-2.5,36.9-4.7,52.2-2.3c1.2,20.8-2.3,38.7-10.4,52.7c-7.9,13.7-20.3,23.1-35.7,27.2C389.8,271.4,384.6,272.1,379.5,272.1z" />
-                                    </g>
-                                 </g>
-                              </g>
-                              <path opacity="0.3" fill="#FFFFFF" d="M211.7,186.6c-14.6,53.6-44.2,85.5-79.2,85.5c-5.1,0-10.3-0.7-15.4-2c-15.4-4.1-27.8-13.5-35.7-27.2
-                                 c-9.4-16.3-12.6-37.8-9.5-63.1c13.4,2.2,26,3,37.9,3c19.7,0,37.6-2.2,54.2-4.3c18.8-2.3,35.5-4.4,50.3-2.5
-                                 C213.5,179.5,212.6,183.1,211.7,186.6z" />
-                              <path opacity="0.3" fill="#FFFFFF" d="M379.5,272.1C379.5,272.1,379.5,272.1,379.5,272.1c-33.2,0-61.6-28.8-76.8-77.4c11.1,1.5,21.8,2.2,31.9,2.2
-                                 c19.7,0,37.6-2.3,54.2-4.4c19.6-2.5,36.9-4.7,52.2-2.3c1.2,20.8-2.3,38.7-10.4,52.7c-7.9,13.7-20.3,23.1-35.7,27.2
-                                 C389.8,271.4,384.6,272.1,379.5,272.1" />
-                           </svg>
-                        </div>
-                        <h5 class="mb-0 text-white">Wedding Party</h5>
-                        <h6 class="mb-5 text-white">17:00h - 19:00</h6>
-                        <p class="text-align-center">Villa Nikko
-                           <br>501 Route de Geary
-                           <br>San Franciscio
-                           <br>(415) 292 - 0100
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <!--End row-->
-               <!--Row-->
-               <div class="row">
-                  <div class="col">
-                     <div class=" text-center mt-5 pt-5">
-                        <a href="#rsvp" class="btn btn-primary btn-wide-sm btn-sm  scroll">RSVP</a>
-                     </div>
-                  </div>
-                  <!--End row-->
-               </div>
-               <!--End container-->
-            </div>
-            <div class="curved-decoration">
-               <svg width="100%" height="100%" class="bg-secondary-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2560 168.6227" enable-background="new 0 0 2560 168.6227" xml:space="preserve">
-<g>
-</g>
-<g>
-   <path d="M0,0c0,0,219.6543,165.951,730.788,124.0771c383.3156-31.4028,827.2139-96.9514,1244.7139-96.9514
-      c212.5106,0,438.9999,3.5,584.4982,1.5844v139.9126H0V0z"></path>
-</g>
-</svg>
-            </div>
-         </section>
-         <section id="gallery" class="bg-secondary " data-aos="fade-right">
-            <div class="container spacer-double-lg">
-               <div class="col-lg-11 mx-lg-auto">
-                  <div class="row justify-content-center card-gutters">
-                     <div class="col-7 mb-3">
-                        <a href="<?php echo base_url() ?>assets/assets/img/offset/large/1.jpg" class="popup-image hover-effect d-block">
-                           <img class="img-fluid" src="<?php echo base_url() ?>assets/assets/img/offset/1.jpg" alt="">
-                           <span class="hover-effect-container">
-                              <span class="hover-effect-icon has-svg">
-                                 <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 73.6404 64.5606" enable-background="new 0 0 73.6404 64.5606" xml:space="preserve">
-                                    <g>
-                                       <path fill="#E25D5D" d="M36.904,6.66L36.904,6.66C28.5329-1.7395,14.9401-1.8373,6.4502,6.4736
-                                          c-8.5632,8.3827-8.5871,22.1694-0.2037,30.724l24.4097,24.9081c3.1797,3.2446,8.3876,3.2973,11.6323,0.1176l24.7745-24.2787
-                                          c8.5602-8.3889,8.832-22.3842,0.4549-30.956C59.1567-1.5672,45.4453-1.7103,36.904,6.66z"/>
-                                       <path fill="#FFFFFF" d="M44.695,28.8005c0-0.4883-0.3996-0.8879-0.8879-0.8879h-4.4394v-4.4394
-                                          c0-0.4883-0.3996-0.8879-0.8879-0.8879h-2.9596c-0.4883,0-0.8879,0.3996-0.8879,0.8879v4.4394h-4.4394
-                                          c-0.4883,0-0.8879,0.3995-0.8879,0.8879v2.9596c0,0.4883,0.3996,0.8879,0.8879,0.8879h4.4394v4.4394
-                                          c0,0.4883,0.3996,0.8879,0.8879,0.8879h2.9596c0.4883,0,0.8879-0.3996,0.8879-0.8879V32.648h4.4394
-                                          c0.4883,0,0.8879-0.3995,0.8879-0.8879V28.8005z"/>
-                                    </g>
-                                 </svg>
-                              </span>
-                           </span>
-                        </a>
-                     </div>
-                     <div class="col-5 align-self-end mb-3">
-                        <a href="<?php echo base_url() ?>assets/assets/img/offset/large/2.jpg" class="popup-image hover-effect d-block">
-                           <img class="img-fluid" src="<?php echo base_url() ?>assets/assets/img/offset/2.jpg" alt="">
-                           <span class="hover-effect-container">
-                              <span class="hover-effect-icon has-svg">
-                                 <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 73.6404 64.5606" enable-background="new 0 0 73.6404 64.5606" xml:space="preserve">
-                                    <g>
-                                       <path fill="#E25D5D" d="M36.904,6.66L36.904,6.66C28.5329-1.7395,14.9401-1.8373,6.4502,6.4736
-                                          c-8.5632,8.3827-8.5871,22.1694-0.2037,30.724l24.4097,24.9081c3.1797,3.2446,8.3876,3.2973,11.6323,0.1176l24.7745-24.2787
-                                          c8.5602-8.3889,8.832-22.3842,0.4549-30.956C59.1567-1.5672,45.4453-1.7103,36.904,6.66z"/>
-                                       <path fill="#FFFFFF" d="M44.695,28.8005c0-0.4883-0.3996-0.8879-0.8879-0.8879h-4.4394v-4.4394
-                                          c0-0.4883-0.3996-0.8879-0.8879-0.8879h-2.9596c-0.4883,0-0.8879,0.3996-0.8879,0.8879v4.4394h-4.4394
-                                          c-0.4883,0-0.8879,0.3995-0.8879,0.8879v2.9596c0,0.4883,0.3996,0.8879,0.8879,0.8879h4.4394v4.4394
-                                          c0,0.4883,0.3996,0.8879,0.8879,0.8879h2.9596c0.4883,0,0.8879-0.3996,0.8879-0.8879V32.648h4.4394
-                                          c0.4883,0,0.8879-0.3995,0.8879-0.8879V28.8005z"/>
-                                    </g>
-                                 </svg>
-                              </span>
-                           </span>
-                        </a>
-                     </div>
-                     <div class="col-5">
-                        <a href="<?php echo base_url() ?>assets/assets/img/offset/large/3.jpg" class="popup-image hover-effect d-block">
-                           <img class="img-fluid" src="<?php echo base_url() ?>assets/assets/img/offset/3.jpg" alt="">
-                           <span class="hover-effect-container">
-                              <span class="hover-effect-icon has-svg">
-                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 73.6404 64.5606" enable-background="new 0 0 73.6404 64.5606" xml:space="preserve">
-                                    <g>
-                                       <path fill="#E25D5D" d="M36.904,6.66L36.904,6.66C28.5329-1.7395,14.9401-1.8373,6.4502,6.4736
-                                          c-8.5632,8.3827-8.5871,22.1694-0.2037,30.724l24.4097,24.9081c3.1797,3.2446,8.3876,3.2973,11.6323,0.1176l24.7745-24.2787
-                                          c8.5602-8.3889,8.832-22.3842,0.4549-30.956C59.1567-1.5672,45.4453-1.7103,36.904,6.66z"/>
-                                       <path fill="#FFFFFF" d="M44.695,28.8005c0-0.4883-0.3996-0.8879-0.8879-0.8879h-4.4394v-4.4394
-                                          c0-0.4883-0.3996-0.8879-0.8879-0.8879h-2.9596c-0.4883,0-0.8879,0.3996-0.8879,0.8879v4.4394h-4.4394
-                                          c-0.4883,0-0.8879,0.3995-0.8879,0.8879v2.9596c0,0.4883,0.3996,0.8879,0.8879,0.8879h4.4394v4.4394
-                                          c0,0.4883,0.3996,0.8879,0.8879,0.8879h2.9596c0.4883,0,0.8879-0.3996,0.8879-0.8879V32.648h4.4394
-                                          c0.4883,0,0.8879-0.3995,0.8879-0.8879V28.8005z"/>
-                                    </g>
-                                 </svg>
-                              </span>
-                           </span>
-                        </a>
-                     </div>
-                     <div class="col-3">
-                        <a href="<?php echo base_url() ?>assets/assets/img/offset/large/4.jpg " class="popup-image hover-effect d-block">
-                           <img class="img-fluid" src="<?php echo base_url() ?>assets/assets/img/offset/4.jpg" alt="">
-                           <span class="hover-effect-container">
-                              <span class="hover-effect-icon has-svg">
-                                 <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 73.6404 64.5606" enable-background="new 0 0 73.6404 64.5606" xml:space="preserve">
-                                    <g>
-                                       <path fill="#E25D5D" d="M36.904,6.66L36.904,6.66C28.5329-1.7395,14.9401-1.8373,6.4502,6.4736
-                                          c-8.5632,8.3827-8.5871,22.1694-0.2037,30.724l24.4097,24.9081c3.1797,3.2446,8.3876,3.2973,11.6323,0.1176l24.7745-24.2787
-                                          c8.5602-8.3889,8.832-22.3842,0.4549-30.956C59.1567-1.5672,45.4453-1.7103,36.904,6.66z"/>
-                                       <path fill="#FFFFFF" d="M44.695,28.8005c0-0.4883-0.3996-0.8879-0.8879-0.8879h-4.4394v-4.4394
-                                          c0-0.4883-0.3996-0.8879-0.8879-0.8879h-2.9596c-0.4883,0-0.8879,0.3996-0.8879,0.8879v4.4394h-4.4394
-                                          c-0.4883,0-0.8879,0.3995-0.8879,0.8879v2.9596c0,0.4883,0.3996,0.8879,0.8879,0.8879h4.4394v4.4394
-                                          c0,0.4883,0.3996,0.8879,0.8879,0.8879h2.9596c0.4883,0,0.8879-0.3996,0.8879-0.8879V32.648h4.4394
-                                          c0.4883,0,0.8879-0.3995,0.8879-0.8879V28.8005z"/>
-                                    </g>
-                                 </svg>
-                              </span>
-                           </span>
-                        </a>
-                     </div>
-                     <div class="col-3">
-                        <a href="<?php echo base_url() ?>assets/assets/img/offset/large/5.jpg" class="popup-image hover-effect d-block">
-                           <img class="img-fluid" src="<?php echo base_url() ?>assets/assets/img/offset/5.jpg" alt="">
-                           <span class="hover-effect-container">
-                              <span class="hover-effect-icon has-svg">
-                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 73.6404 64.5606" enable-background="new 0 0 73.6404 64.5606" xml:space="preserve">
-                                    <g>
-                                       <path fill="#E25D5D" d="M36.904,6.66L36.904,6.66C28.5329-1.7395,14.9401-1.8373,6.4502,6.4736
-                                          c-8.5632,8.3827-8.5871,22.1694-0.2037,30.724l24.4097,24.9081c3.1797,3.2446,8.3876,3.2973,11.6323,0.1176l24.7745-24.2787
-                                          c8.5602-8.3889,8.832-22.3842,0.4549-30.956C59.1567-1.5672,45.4453-1.7103,36.904,6.66z"/>
-                                       <path fill="#FFFFFF" d="M44.695,28.8005c0-0.4883-0.3996-0.8879-0.8879-0.8879h-4.4394v-4.4394
-                                          c0-0.4883-0.3996-0.8879-0.8879-0.8879h-2.9596c-0.4883,0-0.8879,0.3996-0.8879,0.8879v4.4394h-4.4394
-                                          c-0.4883,0-0.8879,0.3995-0.8879,0.8879v2.9596c0,0.4883,0.3996,0.8879,0.8879,0.8879h4.4394v4.4394
-                                          c0,0.4883,0.3996,0.8879,0.8879,0.8879h2.9596c0.4883,0,0.8879-0.3996,0.8879-0.8879V32.648h4.4394
-                                          c0.4883,0,0.8879-0.3995,0.8879-0.8879V28.8005z"/>
-                                    </g>
-                                 </svg>
-                              </span>
-                           </span>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="curved-decoration ">
-            <svg width="100%" height="100%" class="bg-secondary-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2560 168.6227" enable-background="new 0 0 2560 168.6227" xml:space="preserve">
-<g>
-</g>
-<g>
-   <path d="M0,0c0,0,219.6543,165.951,730.788,124.0771c383.3156-31.4028,827.2139-96.9514,1244.7139-96.9514
-      c212.5106,0,438.9999,3.5,584.4982,1.5844v139.9126H0V0z"></path>
-</g>
-</svg>
-            </div>
-         </section>
-         
-         <section id="rsvp" class="bg-secondary spacer-one-top-lg o-hidden " data-aos="fade-left">
-            <!--Container-->
-            <div class="container spacer-one-bottom-lg">
-               <!--Row-->
-               <div class="row justify-content-center">
-                  <div class="col">
-                     <div class=" mb-5 pb-5 text-center">
-                        <h1 class="display-4 ">Konfirmasi Kehadiran</h1>
-                        <p class="w-md-40 mb-0 mx-auto text-dark-gray opacity-8">Merupakan kehormatan bagi kami jika anda berkenan menghadiri</p>
-                     </div>
-                  </div>
-               </div>
-               <!--End row-->
-               <div class="row justify-content-center">
-                  <div class="col-xl-6 col-lg-6 col-md-6">
-                     <!-- <form id="form-registry" > -->
-                        <div class="form-group">
-                           <label >Nama</label>
-                           <input name="nama" type="text" class="form-control form-control-lg" placeholder="Nama Anda" id="nama">
-                           <span id="nama_error" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                           <label>Alamat</label>
-                           <input name="alamat" type="text" class="form-control form-control-lg" placeholder="Alamat Anda" id="alamat">
-                           <span id="alamat_error" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                           <label>Email</label>
-                           <input name="email" type="email" class="form-control form-control-lg" placeholder="Email anda" id="email">
-                           <span id="email_error" class="text-danger"></span>
-                        </div>
-                        <div class="row">
-                           <div class="col-12">
-                              <div class="form-group mb-1">
-                                 <label>Kehadiran</label>
-                              </div>
-                           </div>
-                           <div class="col">
-                              <div class="form-group rounded bg-white p-2 border">
-                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="atttending-yes" name="atttending" class="custom-control-input" value="Y">
-                                    <label class="custom-control-label" for="atttending-yes">Ya, Saya akan datang</label>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col">
-                              <div class="form-group rounded bg-white p-2 border">
-                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="atttending-no" name="atttending" class="custom-control-input" value="N">
-                                    <label class="custom-control-label" for="atttending-no" >Maaf, saya tidak bisa datang</label>
-                                 </div>
-                              </div>
-                           </div>
-                           
-                        </div>
-                        <span id="kehadiran_error" class="text-danger"></span>
-                        <div class="form-group text-center">
-                           <button class="btn btn-lg btn-block btn-primary" type="submit" id="submit-registry">Konfirmasi kehadiran</button>
-                           <!-- <small class="mt-2 text-dark-gray opacity-8">You’ll recieve a confirmation email.</small> -->
-                        </div>
-                     <!-- </form> -->
-                  </div>
-               </div>
-            </div>
-            <!--End container-->
-            <div class="curved-decoration">
-               <svg width="100%" height="100%" class="bg-white-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2560 168.6227" enable-background="new 0 0 2560 168.6227" xml:space="preserve">
-<g>
-</g>
-<g>
-   <path d="M0,0c0,0,219.6543,165.951,730.788,124.0771c383.3156-31.4028,827.2139-96.9514,1244.7139-96.9514
-      c212.5106,0,438.9999,3.5,584.4982,1.5844v139.9126H0V0z"></path>
-</g>
-</svg>
-            </div>
-            <div class="svg-decoration-container">
-               <div class="svg-decoration middle-left ">
-                  <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 135.7427 125.4471" enable-background="new 0 0 135.7427 125.4471" xml:space="preserve">
-                     <g>
-                        <path fill="#E25D5D" d="M46.3709,123.4824c-0.718-1.036-1.9904-1.1435-3.1008-1.5854c-1.2856-0.5117-2.4638-1.1784-3.5942-1.9727
-                           c-1.5318-1.0764-3.2602,1.2297-1.742,2.334c1.2495,0.9086,2.5876,1.7014,4.0061,2.3174c1.2267,0.5326,2.7301,1.2758,4.0077,0.6047
-                           C46.6049,124.8354,46.7955,124.0952,46.3709,123.4824z" />
-                        <path fill="#E25D5D" d="M53.0453,115.3059c-4.4957-1.9741-16.933-9.8289-17.1288,0.5154c-0.0176,0.9304-1.339,0.8885-0.5229,1.3398
-                           c4.3032,2.3803,8.8232,4.1526,13.4673,5.7454C50.2921,123.3976,54.4329,115.9152,53.0453,115.3059z" />
-                        <path fill="#E25D5D" d="M62.0153,116.0416c-2.2559-8.7056-23.1343-17.659-29.0229-12.8535c-1.0698,0.873-2.0786,1.41-0.7908,2.0262
-                           c9.4616,4.5257,18.9397,8.7919,28.2448,13.6547C62.0641,119.7142,62.4759,117.819,62.0153,116.0416z" />
-                        <path fill="#E25D5D" d="M76.0122,107.4455c-5.951-10.7841-44.442-25.2437-50.1732-15.1986
-                           c-0.8961,1.5705-2.7192,1.8645-1.033,2.647c15.2403,7.0732,31.1254,13.0623,46.6307,19.5559
-                           C73.8316,115.4529,77.2432,109.6764,76.0122,107.4455z" />
-                        <path fill="#E25D5D" d="M83.7416,106.7034C78.3731,94.7113,29.5014,64.5428,19.746,80.4405
-                           c-0.7308,1.191-1.9928,1.3809-0.778,1.9935c20.5406,10.3589,42.2243,18.8136,63.4472,27.668
-                           C84.5853,111.0076,84.6997,108.8435,83.7416,106.7034z" />
-                        <path fill="#E25D5D" d="M98.5164,101.8162C75.9046,83.6435,29.9653,64.7263,11.4555,66.8863
-                           c-1.4692,0.1715-2.1442,1.4899-0.829,2.1242C38.748,82.571,68.3512,93.2941,97.2411,105.084
-                           C99.3326,105.9376,100.2773,103.2313,98.5164,101.8162z" />
-                        <path fill="#E25D5D" d="M107.1592,96.1165C83.8287,79.3572,34.7819,55.1261,5.8419,55.6944
-                           c-1.5715,0.0309-2.194,1.5156-0.8673,2.2222c31.9451,17.0142,66.9155,29.2015,100.7179,41.958
-                           C108.1199,100.7907,109.2719,97.6342,107.1592,96.1165z" />
-                        <path fill="#E25D5D" d="M114.6054,91.6748c-18.5585-7.6446-37.8352-19.8791-56.4415-27.4064
-                           c-18.5205-7.4928-36.2257-11.488-55.3145-17.4242c-1.1381-0.3538-1.693,1.1593-0.6632,1.6994
-                           c17.7171,9.2916,36.8515,16.1962,55.2638,23.9894c18.4876,7.8251,37,15.5839,55.5358,23.2921
-                           C115.6339,96.9261,117.2585,92.7675,114.6054,91.6748z" />
-                        <path fill="#E25D5D" d="M122.1404,85.1791c-20.1722-8.1227-46.2771-24.6321-66.3275-33.0562
-                           C35.8548,43.7373,22.0684,42.4468,1.59,35.409c-1.1488-0.3948-2.2602,1.2992-1.0966,1.976
-                           c18.2497,10.615,38.3164,18.5188,57.6704,26.8833c20.5605,8.8859,41.2186,17.6126,62.1146,25.6818
-                           C123.3536,91.1378,125.2017,86.4118,122.1404,85.1791z" />
-                        <path fill="#E25D5D" d="M125.8786,79.2283c-20.4912-8.5128-39.3423-23.3619-59.7019-32.1852
-                           c-20.2289-8.7668-41.822-12.9998-62.7254-20.0257c-1.4301-0.4806-2.8188,1.6116-1.3664,2.4625
-                           c18.5942,10.8928,39.283,18.7518,58.9938,27.3905c20.9225,9.1696,41.9389,18.119,63.0272,26.9002
-                           C127.0041,84.9774,128.7778,80.4327,125.8786,79.2283z" />
-                        <path fill="#E25D5D" d="M130.2242,73.6163c-20.2535-10.3398-41.0253-19.7456-61.8777-28.8054
-                           C47.6527,35.82,26.5998,25.9044,4.8377,19.8079c-1.5911-0.4457-2.4066,1.6343-0.931,2.3856
-                           c20.225,10.2978,41.8862,18.0369,62.5945,27.3457c20.7709,9.3368,41.2042,19.3354,61.7207,29.2078
-                           C131.4383,80.2947,133.338,75.2059,130.2242,73.6163z" />
-                        <path fill="#E25D5D" d="M133.7529,64.5225C92.9384,44.6669,51.2215,25.7029,7.7763,12.2997
-                           c-2.0049-0.6184-3.1193,2.1105-1.1989,3.0718c41.237,20.6429,83.5807,36.8986,125.1858,54.2489
-                           C134.9886,70.9654,136.9225,66.0644,133.7529,64.5225z" />
-                        <path fill="#E25D5D" d="M134.2905,55.923C94.9692,38.3296,54.6778,19.4975,13.2622,7.3866
-                           c-1.3778-0.4028-2.1423,1.4799-0.8162,2.0915c39.4496,18.1936,80.5137,32.9042,120.0718,50.9872
-                           C135.3698,61.7691,137.153,57.2038,134.2905,55.923z" />
-                        <path fill="#E25D5D" d="M67.0403,21.4345C51.8222,14.2468,35.3193,7.9447,19.1524,3.2534
-                           c-1.6513-0.4791-2.5117,1.7162-0.9693,2.4837c15.0681,7.4986,31.4775,14.0419,47.5436,19.0634
-                           C67.9489,25.4949,69.1491,22.4304,67.0403,21.4345z" />
-                        <path fill="#E25D5D" d="M57.3122,11.6418C57.4051,8.9267,34.2234-3.2668,28.3663,0.8357c-1.0556,0.7394-1.444,1.5195-0.4906,2.0276
-                           c8.8657,4.7246,18.7788,8.4473,28.1739,12.0138C58.1769,15.6846,57.2371,13.8362,57.3122,11.6418z" />
-                        <path fill="#E25D5D" d="M133.1648,47.7784c-14.3374-6.7709-29.4575-12.6714-44.4443-17.8448
-                           c-1.916-0.6615-2.9336,2.0409-1.1351,2.9084c14.2838,6.8894,29.1755,13.3631,44.1255,18.6617
-                           C134.1552,52.3701,135.4792,48.8715,133.1648,47.7784z" />
-                        <path fill="#E25D5D" d="M128.0374,37.178c-8.7472-3.7643-17.9131-7.8857-27.2702-9.8305c-1.6177-0.336-1.8544,1.9524-0.63,2.6019
-                           c8.3756,4.4434,17.5773,7.6076,26.2422,11.4769C129.0562,42.6215,130.7358,38.3392,128.0374,37.178z" />
-                     </g>
-                  </svg>
-               </div>
-               <div class="svg-decoration bottom-right">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 61.0903 58.3236" enable-background="new 0 0 61.0903 58.3236" xml:space="preserve">
-                     <g>
-                        <g>
-                           <path fill="#E25D5D" d="M35.9444,45.3305c-10.4863,0.4059-23.3154,1.1544-24.786-9.9408
-                              c-0.0596-0.4498-2.4276,1.2219-2.4493,0.7422c-0.0445-0.9828-2.2473-1.9201-2.3009-2.8204c-0.026-0.4362,0.95-5.4905,0.925-5.9088
-                              c-0.613-10.2666,2.9679-15.6386,18.7795-22.1382" />
-                           <g>
-                              <path fill="#E25D5D" d="M17.5292,2.3522c-3.0514,1.7301-4.9803,2.7768-5.9291,3.8411c-2.3624,2.6499-2.0799,2.8104-3.8628,5.1073
-                                 c-0.9299,1.198-2.1649,3.3742-2.8958,4.6846c-1.5784,2.8298-3.161,5.0214-4.1949,7.9994
-                                 c-0.1643,0.4732-0.287,1.1995-0.344,1.6845c-0.6135,5.2182-0.392,10.2644,1.5788,15.0433
-                                 c1.0541,2.556,2.3881,4.0704,4.1426,6.0135c1.5003,1.6615,2.9967,2.7417,4.9881,4.0083
-                                 c1.9914,1.2666,4.2598,2.4221,6.6644,3.3156c4.0993,1.5233,8.6838,2.8517,13.0389,3.4698
-                                 c0.9472,0.1344,1.3667,0.3425,1.8013-0.118c0.1304-0.1381-0.2267,0.08,0,0c0.2267-0.08,0.8197,0.0119,1.2083,0.0417
-                                 c0.1177,0.009,1.3635,0.1445,1.5,0.1667c0.3615,0.0587-0.5167-0.1693,0,0c0.2272,0.0744,0.5132-0.1127,0.7193-0.0417
-                                 c0.2106,0.0726,0.7986-0.0688,0.9891,0c0.1507,0.0544,3.2895,0.7708,0.9236-0.1166c-0.4224-0.1584,1.9838,0.8688,3.0906,0.8717
-                                 c7.957,0.0214,10.8035-2.7496,18.2347-5.2135C68.111,50.1496,44.2658-12.8068,17.5292,2.3522z M20.8936,43.3265
-                                 c-0.1999-0.0728-0.7859,0.0706-0.9847-0.0044c-0.1874-0.0707-0.199-1.1271-0.3852-1.1999
-                                 c-0.1944-0.076-0.3881-0.153-0.5808-0.2313c-0.1956-0.0794-0.3902-0.16-0.5839-0.2419c-0.2364-0.1,21.2113,0.4893,20.9783,0.3854
-                                 c-0.1281-0.0571-21.9761-0.7566-22.0651-0.8643c-3.3676-4.0733-8.5622-5.1499-9.5219-9.8847
-                                 c-0.4181-2.0628,0.3013-3.9592,0.1423-5.306c-0.0724-0.6131,0.9769-1.2124,0.9649-1.7231
-                                 c-0.0128-0.5442-1.7365-1.1933-1.5226-1.5587c0.3137-0.5356,0.7814-0.721,1.003-1.2618
-                                 c0.1555-0.3795-0.7241-0.8316-0.4942-1.2088c0.1826-0.2997,0.3894-0.6032,0.6213-0.9176c0.2154-0.292,0.4525-0.5934,0.7121-0.91
-                                 c0.2411-0.294,0.5017-0.6011,0.7823-0.9259c0.2952-0.3416,0.6127-0.7028,0.9532-1.0889
-                                 c0.2928-0.3319,0.6025-0.6823,0.9298-1.0544c0.2545-0.2894,0.5196-0.5919,0.7955-0.9092
-                                 c0.3291-0.3784,0.6735-0.7779,1.0337-1.2011c0.4514-0.5303-0.1945-1.491,0.3072-2.1011
-                                 c0.3813-0.4636,2.0382,0.6636,2.4493,0.1484c0.4176-0.5232,0.7385,0.2101,1.1876-0.3711
-                                 c0.2728-0.353,1.1256-1.4054,1.4102-1.7813 M30.2825,41.0306c0,0-1.2261,4.206-1.5216,4.1193
-                                 c-0.2425-0.0711-1.2009-0.4472-1.4473-0.5196c-0.1911-0.0561-0.4377-0.0544-0.6309-0.1113c-0.2012-0.0593,0.2031,0.0603,0,0
-                                 c-0.5116-0.152-1.5851-0.8654-2.1052-1.0255c-0.1648-0.0507-0.3299-0.1019-0.4952-0.1536
-                                 c-0.3719-0.1163,4.1062,2.3197,3.7138,2.3295c-0.1685,0.0042-5.1664-2.7959-5.3336-2.8516 M60.157,48.2302" />
-                           </g>
-                        </g>
-                     </g>
-                  </svg>
-               </div>
-            </div>
-         </section>
-         <section id="location" class=" spacer-one-top-lg " data-aos="zoom-out">
-            <!--Container-->
-            <div class="container spacer-one-bottom-lg">
-               <!--Row-->
-               <div class="row justify-content-center">
-                  <div class="col">
-                     <div class=" mb-5 pb-5 text-center">
-                        <h1 class="display-4 ">Lokasi</h1>
-                        <!-- <p class="w-md-40 mb-0 mx-auto text-dark-gray opacity-8 ">Accommodation - information below </p> -->
-                     </div>
-                  </div>
-               </div>
-               <!--End row-->
-               <div class="row text-center">
-                  <div class="col-md-12 ">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.683728838511!2d107.6198273144352!3d-6.928355569741015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e87ffb3736a5%3A0x1fa0782bad367c26!2sWebhozz+Bandung!5e0!3m2!1sid!2sid!4v1512984270823" width="100%" height="600" frameborder="0" style="border:0; border-radius:100px" allowfullscreen></iframe>
-                     <div class="badge-overlap">
-                        <span class="badge">Lokasi</span>
-                     </div>
-                     <h5 class="mt-3 mb-3">Hôtel Monaco </h5>
-                     <p>501 Geary Street
-                        <br>San Franciscio, California
-                        <br>(415) 292 - 0100
-                     </p>
-                     <!-- <a href="#" class="hover-arrow">Get directions <span class="fa fa-arrow-right" ></span></a> -->
-                  </div>
-                  
-               </div>
-            </div>
-            <!--End container-->
-         </section>
-         <!--Hero section-->
-         <section class="gradient-overlay " data-aos="slide-up">
-            <img class="bg-image" src="<?php echo base_url() ?>assets/assets/img/2.jpg" alt="">
-            <div class="container">
-               <!--row-->
-               <div class="row  min-vh-80 align-items-center z-index-2 position-relative text-center">
-                  <div class="col-12">
-                     <div class=" play-btn-container mb-4">
-                        <a href="https://www.youtube.com/watch?v=Gc2en3nHxA4" class="btn btn-primary btn-play popup-youtube">
-                           <svg class="icon-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 168.7 270.7" enable-background="new 0 0 168.7 270.7;" xml:space="preserve">
-                              <path class="st0" d="M0,252.5V18.2C0,2,21.5-6.1,34.1,5.4l128.7,117.1c7.8,7.1,7.8,18.6,0,25.7L34.1,265.3
-                                 C21.5,276.8,0,268.7,0,252.5z" fill="#FFFFFF" />
-                           </svg>
-                        </a>
-                     </div>
-                     <h1 class="display-4 font-secondary  text-white mb-4">Just Married</h1>
-                     <p class="w-md-50 mb-0 mx-auto text-light lead font-weight-300 "> Friendship... is not something you learn in school. But if you haven't learned the meaning of friendship, you really haven't learned anything</p>
-                  </div>
-               </div>
-               <!--End row-->
-            </div>
-            <!--End container-->
-            <div class="curved-decoration ">
-               <svg width="100%" height="100%" class="bg-secondary-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2560 168.6227" enable-background="new 0 0 2560 168.6227" xml:space="preserve">
-<g>
-</g>
-<g>
-   <path d="M0,0c0,0,219.6543,165.951,730.788,124.0771c383.3156-31.4028,827.2139-96.9514,1244.7139-96.9514
-      c212.5106,0,438.9999,3.5,584.4982,1.5844v139.9126H0V0z"></path>
-</g>
-</svg>
-            </div>
-         </section>
 
-                  <!-- </div> -->
-         <!--End hero section-->
-         <footer class="spacer-double-lg bg-secondary">
-            <div class="container">
-               <!--row-->
-               <div class="row justify-content-center">
-                  <div class="col-md-4">
-                  </div>
-                  <div class="col-md-3">
-                  </div>
-                  <div class="col-md-4">
-                     <h6 class="text-uppercase font-weight-600 font-size-15 mb-4 upper-letter-space">&copy; copyright</h6>
-                     
-                        <small class="text-dark-gray opacity-8 mt-2">2019 all right reserved <a href="#">digipara</a>
-                        </small>
-                  </div>
-               </div>
-               <!--End row-->
+                    </div>
+                    <!-- END REVOLUTION SLIDER -->
+                </div>
+                <!-- END REVOLUTION SLIDER WRAPPER -->
+                <!-- STORY SECTION START -->
+                <div class="wd_story_section" id="2">
+                    <div class="container">
+                        <div class="wd_section_heading">
+                            <h1 class="text-center">Our Love Story</h1>
+                            <span class="wd_dot_heading"></span>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="story_section">
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <div class="wd_img_round">
+                                            <img src="http://placehold.it/300x300" alt=""/>
+                                            <div class="overlay">
+                                                <span><a href="images/our_story/01.jpg" class="fancybox"><i class="fa fa-search"></i></a></span>
+                                            </div>
+                                        </div>
+                                        <div class="wd_post_date wd_right">
+                                            <span class="number"> 26 Jan</span>
+                                            <span class="year"> 2016</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                        <h2>We’ve Met</h2>
+                                        <p>Donec blandit commodo nibh, pulvinar cursus mi imperdiet et. Curabitur sed tortor sed massa eleifend lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean eget sem a augue pellentesque ullamcorper non at leo. Vivamus id diam id eros blandit cursus. Integer ac metus ac quam imperdiet hendrerit quis eu erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum in elit id lectus vestibulum dictum. Morbi justo lorem.</p>
+                                    </div>
+                                </div>
+                                <div class="story_section">
+                                    <div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8 col-sm-12 col-xs-12">
+                                        <div class="wd_img_round">
+                                           <img src="http://placehold.it/300x300" alt=""/>
+                                            <div class="overlay">
+                                                <span><a href="images/our_story/02.jpg" class="fancybox"><i class="fa fa-search"></i></a></span>
+                                            </div>
+                                        </div>
+                                        <div class="wd_post_date wd_left">
+                                            <span class="number"> 26 Jan</span>
+                                            <span class="year"> 2016</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-lg-pull-4 col-md-pull-4 col-sm-12 col-xs-12">
+                                        <h2>First Date</h2>
+                                        <p>Donec blandit commodo nibh, pulvinar cursus mi imperdiet et. Curabitur sed tortor sed massa eleifend lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean eget sem a augue pellentesque ullamcorper non at leo. Vivamus id diam id eros blandit cursus. Integer ac metus ac quam imperdiet hendrerit quis eu erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum in elit id lectus vestibulum dictum. Morbi justo lorem.</p>
+                                    </div>
+
+                                </div>
+                                <div class="story_section">
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <div class="wd_img_round">
+                                            <img src="http://placehold.it/300x300" alt=""/>
+                                            <div class="overlay">
+                                                <span><a href="images/our_story/03.jpg" class="fancybox"><i class="fa fa-search"></i></a></span>
+                                            </div>
+                                        </div>
+                                        <div class="wd_post_date wd_right">
+                                            <span class="number"> 26 Jan</span>
+                                            <span class="year"> 2016</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                        <h2>The Proposal</h2>
+                                        <p>Donec blandit commodo nibh, pulvinar cursus mi imperdiet et. Curabitur sed tortor sed massa eleifend lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean eget sem a augue pellentesque ullamcorper non at leo. Vivamus id diam id eros blandit cursus. Integer ac metus ac quam imperdiet hendrerit quis eu erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum in elit id lectus vestibulum dictum. Morbi justo lorem.</p>
+                                    </div>
+                                </div>
+                                <div class="story_section">
+                                    <div class="col-lg-4 col-md-4 col-lg-push-8 col-md-push-8 col-sm-12 col-xs-12">
+                                        <div class="wd_img_round">
+                                            <img src="http://placehold.it/300x300" alt=""/>
+                                            <div class="overlay">
+                                                <span><a href="images/our_story/04.jpg" class="fancybox"><i class="fa fa-search"></i></a></span>
+                                            </div>
+                                        </div>
+                                        <div class="wd_post_date wd_left">
+                                            <span class="number"> 26 Jan</span>
+                                            <span class="year"> 2016</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-lg-pull-4 col-md-pull-4 col-sm-12 col-xs-12">
+                                        <h2>Engagement</h2>
+                                        <p>Donec blandit commodo nibh, pulvinar cursus mi imperdiet et. Curabitur sed tortor sed massa eleifend lobortis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean eget sem a augue pellentesque ullamcorper non at leo. Vivamus id diam id eros blandit cursus. Integer ac metus ac quam imperdiet hendrerit quis eu erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum in elit id lectus vestibulum dictum. Morbi justo lorem.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wd_about_section upper_spacer50" id="wd_counter">
+                        <div class="wd_about_overlay"></div>
+                        <div class="container">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="wd_counter text-center">
+                                    <i class="wd_icon fa fa-video-camera"></i>
+                                    <h2 class="timer" data-from="0" data-to="2510" data-speed="3000">2510</h2>
+                                    <h3>Movies Watched</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="wd_counter text-center">
+                                    <i class="wd_icon fa fa-coffee"></i>
+                                    <h2 class="timer" data-from="0" data-to="300" data-speed="3000">300</h2>
+                                    <h3>Cup Of Coffee</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="wd_counter text-center">
+                                    <i class="wd_icon fa fa-glass"></i>
+                                    <h2 class="timer" data-from="0" data-to="400" data-speed="3000">400</h2>
+                                    <h3>Fun & Parties</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <div class="wd_counter text-center">
+                                    <i class="wd_icon fa fa-plane"></i>
+                                    <h2 class="timer" data-from="0" data-to="550" data-speed="3000">550</h2>
+                                    <h3>Best Outing</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- STORY SECTION END -->
+                
+                <!-- EVENT SECTION START -->
+                <div class="wd_story_section" id="3">
+                    <div class="container">
+                        <div class="wd_section_heading">
+                            <h1 class="text-center">Event Details</h1>
+                            <span class="wd_dot_heading"></span>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 text-center bottom_padder40">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum.</p>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-2 col-xs-8 wd_card">
+                            <div class="wd_event_section text-center">
+                                <h2>Ceremony</h2>
+                                <div class="wd_item wd_square effect9 bottom_to_top">
+                                    <a href="#">
+                                        <div class="img"><img src="http://placehold.it/330x330" alt=""/>
+                                        </div>
+                                        <div class="wd_event_info">
+                                            <div class="wd_event_info_back">
+                                                <h3>Schedule</h3>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Date :</span>
+                                                    <span class="wd_text">15 Feb 2016</span>
+                                                </div>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Time :</span>
+                                                    <span class="wd_text">8am-12pm</span>
+                                                </div>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Location :</span>
+                                                    <span class="wd_text">522 Lavaca st., Austin TX 78701</span>
+                                                </div>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Dress Code :</span>
+                                                    <span class="wd_text">Black, White, Pink</span>
+                                                </div>
+                                                <div class="info_box_last">
+                                                    <div class="map_fancybox">
+                                                        <div id="mapBox2">
+                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.911215166146!2d-97.74762068496076!3d30.26811081492685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b50916d8f039%3A0x951d29b2e5bb77da!2s522+Lavaca+St%2C+Austin%2C+TX+78701%2C+USA!5e0!3m2!1sen!2s!4v1455343431264" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><br /><small><a href="https://www.google.com/maps?ll=30.268106,-97.745432&z=16&t=m&hl=en-GB&gl=US&mapclient=embed&q=522+Lavaca+St+Austin,+TX+78701+USA" target="_blank" >View Larger Map</a></small>
+                                                        </div>
+                                                    </div>
+                                                    <a class="inline" href="#mapBox2"><i class="fa fa-map-marker"></i><span class="">View Address</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-2 col-xs-8 wd_card">
+                            <div class="wd_event_section text-center">
+                                <h2>Reception</h2>
+                                <div class="wd_item wd_square effect9 bottom_to_top">
+                                    <a href="#">
+                                        <div class="img"><img src="http://placehold.it/330x330" alt=""/>
+                                        </div>
+                                        <div class="wd_event_info">
+                                            <div class="wd_event_info_back">
+                                                <h3>Schedule</h3>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Date :</span>
+                                                    <span class="wd_text">15 Feb 2016</span>
+                                                </div>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Time :</span>
+                                                    <span class="wd_text">8am-12pm</span>
+                                                </div>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Location :</span>
+                                                    <span class="wd_text">522 Lavaca st., Austin TX 78701</span>
+                                                </div>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Dress Code :</span>
+                                                    <span class="wd_text">Black, White, Pink</span>
+                                                </div>
+                                                <div class="info_box_last">
+                                                    <div style="display:none;">
+                                                        <div id="mapBox1">
+                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.911215166146!2d-97.74762068496076!3d30.26811081492685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b50916d8f039%3A0x951d29b2e5bb77da!2s522+Lavaca+St%2C+Austin%2C+TX+78701%2C+USA!5e0!3m2!1sen!2s!4v1455343431264" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><br /><small><a href="https://www.google.com/maps?ll=30.268106,-97.745432&z=16&t=m&hl=en-GB&gl=US&mapclient=embed&q=522+Lavaca+St+Austin,+TX+78701+USA" target="_blank" >View Larger Map</a></small>
+                                                        </div>
+                                                    </div>
+                                                    <a class="inline" href="#mapBox1"><i class="fa fa-map-marker"></i><span class="">View Address</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-lg-offset-0 col-md-offset-0 col-sm-offset-3 col-xs-offset-2 col-xs-8 wd_card">
+                            <div class="wd_event_section text-center">
+                                <h2>Party</h2>
+                                <div class="wd_item wd_square effect9 bottom_to_top">
+                                    <a href="#">
+                                        <div class="img"><img src="http://placehold.it/330x330" alt=""/>
+                                        </div>
+                                        <div class="wd_event_info">
+                                            <div class="wd_event_info_back">
+                                                <h3>Schedule</h3>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Date :</span>
+                                                    <span class="wd_text">15 Feb 2016</span>
+                                                </div>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Time :</span>
+                                                    <span class="wd_text">8am-12pm</span>
+                                                </div>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Location :</span>
+                                                    <span class="wd_text">522 Lavaca st., Austin TX 78701</span>
+                                                </div>
+                                                <div class="info_box">
+                                                    <span class="wd_label">Dress Code :</span>
+                                                    <span class="wd_text">Black, White, Pink</span>
+                                                </div>
+                                                <div class="info_box_last">
+                                                    <div style="display:none;">
+                                                        <div id="mapBox">
+                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.911215166146!2d-97.74762068496076!3d30.26811081492685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b50916d8f039%3A0x951d29b2e5bb77da!2s522+Lavaca+St%2C+Austin%2C+TX+78701%2C+USA!5e0!3m2!1sen!2s!4v1455343431264" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><br /><small><a href="https://www.google.com/maps?ll=30.268106,-97.745432&z=16&t=m&hl=en-GB&gl=US&mapclient=embed&q=522+Lavaca+St+Austin,+TX+78701+USA" target="_blank" >View Larger Map</a></small>
+                                                        </div>
+                                                    </div>
+                                                    <a class="inline" href="#mapBox"><i class="fa fa-map-marker"></i><span class="">View Address</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- EVENT SECTION END -->
+                <!-- GALLERY SECTION START -->
+                <div class="wd_story_section" id="4">
+                    <div class="container">
+                        <div class="wd_section_heading">
+                            <h1 class="text-center">Best Moments</h1>
+                            <span class="wd_dot_heading"></span>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 text-center">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum.</p>
+                        </div>
+                    </div>
+                    <div class="wd_gallery_section">
+                        <div class="col-lg-4 col-md-4">
+                            <div class="row">
+                                <div class="wd_gal_img">
+                                   <img src="http://placehold.it/527x351" alt="" class="img-responsive"/>
+                                    <div class="wd_gal_overlay">
+                                        <div class="wd_gal_center">
+                                            <h4>Lorem ipsum dolor sit amet</h4>
+                                            <ul class="wd_social_icons">
+                                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-google-plus fa-lg"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wd_gal_img">
+                                    <img src="http://placehold.it/527x351" alt="" class="img-responsive"/>
+                                    <div class="wd_gal_overlay">
+                                        <div class="wd_gal_center">
+                                            <h4>Lorem ipsum dolor sit amet</h4>
+                                            <ul class="wd_social_icons">
+                                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-google-plus fa-lg"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="row">
+                                <div class="wd_gal_img">
+                                    <img src="http://placehold.it/570x760" alt="" class="img-responsive"/>
+                                    <div class="wd_gal_overlay">
+                                        <div class="wd_gal_center">
+                                            <h4>Lorem ipsum dolor sit amet</h4>
+                                            <ul class="wd_social_icons">
+                                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-google-plus fa-lg"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="row">
+                                <div class="wd_gal_img">
+                                    <img src="http://placehold.it/527x351" alt="" class="img-responsive"/>
+                                    <div class="wd_gal_overlay">
+                                        <div class="wd_gal_center">
+                                            <h4>Lorem ipsum dolor sit amet</h4>
+                                            <ul class="wd_social_icons">
+                                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-google-plus fa-lg"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wd_gal_img">
+                                   <img src="http://placehold.it/527x351" alt="" class="img-responsive"/>
+                                    <div class="wd_gal_overlay">
+                                        <div class="wd_gal_center">
+                                            <h4>Lorem ipsum dolor sit amet</h4>
+                                            <ul class="wd_social_icons">
+                                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-google-plus fa-lg"></span></a></li>
+                                                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- GALLERY SECTION END -->
+                <!-- RSVP SECTION START -->
+                <div class="wd_story_section bottom_padder80" id="5">
+                    <div class="wd_section_heading">
+                        <h1 class="text-center">RSVP</h1>
+                        <span class="wd_dot_heading"></span>
+                    </div>
+                    <div class="container">
+                        <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 text-center">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo, dui ipsum tristique dolor, in ullamcorper tellus velit quis nisl. In placerat volutpat elit quis dictum.</p>
+                        </div>
+                        <div class="wd_rsvp_section">
+                            <form id="theForm" class="simform" autocomplete="off" action="" method="post">
+                                <input type="hidden" name="recipient" value="upasana.jain@himanshusofttech.com">
+                                <input type="hidden" name="subject" value="Wedding Planner" />
+                                <div class="simform-inner">
+                                    <ol class="questions">
+                                        <li>
+                                            <span><label for="q1">What's Your Name?</label></span>
+                                            <input id="q1" name="name" type="text" />
+                                        </li>
+                                        <li>
+                                            <span><label for="q2">What's Your Email?</label></span>
+                                            <input id="q2" name="email" type="text" data-validate="email" />
+                                        </li>
+                                        <li>
+                                            <span><label for="q3">What's Your Mobile Number?</label></span>
+                                            <input id="q3" name="mobile_no" type="text" data-validate="number" />
+                                        </li>
+                                        <li>
+                                            <span><label for="q4">No. Of Members?</label></span>
+                                            <input id="q4" name="no_of_member" type="text" data-validate="mnumber" />
+                                        </li>
+                                        <li>
+                                            <span><label for="q5">Will Attent Event(Ceremony,Wedding,Party)</label></span>
+                                            <input id="q5" name="events" type="text" />
+                                        </li>
+                                    </ol>
+                                    <!-- /questions -->
+                                    <button class="submit" type="submit">Send answers</button>
+                                    <div class="controls">
+                                        <button class="next fa fa-long-arrow-right"></button>
+                                        <div class="progress"></div>
+                                        <span class="number">
+								<span class="number-current"></span>
+                                        <span class="number-total"></span>
+                                        </span>
+                                        <span class="error-message"></span>
+                                    </div>
+                                    <!-- / controls -->
+                                </div>
+                                <!-- /simform-inner -->
+                                <span class="final-message"></span>
+                            </form>
+                            <!-- /simform -->
+                        </div>
+                        <!--form -->
+                    </div>
+                </div>
+                <!-- RSVP SECTION START -->
+
+                <!-- FAMILY SECTION START -->
+                <div class="wd_story_section" id="6">
+                    <div class="container">
+                        <div class="wd_section_heading">
+                            <h1 class="text-center">Family Members</h1>
+                            <span class="wd_dot_heading"></span>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 bottom_padder40">
+                            <p class="text-center">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 upper_spacer50">
+                            <div class="wd_family_section">
+                                <h2>Christeme Family</h2>
+                                <div id="owl_man_family" class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="wd_family_member">
+                                           <img class="img-responsive" src="http://placehold.it/155x155" alt=""/>
+                                            <h3>Bill Swan</h3>
+                                            <h4>Father</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wd_family_member">
+                                            <img class="img-responsive" src="http://placehold.it/155x155" alt=""/>
+                                            <h3>Christena Swan</h3>
+                                            <h4>Mother</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wd_family_member">
+                                            <img class="img-responsive" src="http://placehold.it/155x155" alt=""/>
+                                            <h3>Max Swan</h3>
+                                            <h4>Brother</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wd_family_member">
+                                            <img class="img-responsive" src="http://placehold.it/155x155" alt=""/>
+                                            <h3>Marry Swan</h3>
+                                            <h4>Sister</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                            <div class="wd_family_section">
+                                <img src="http://placehold.it/255x537" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 upper_spacer50">
+                            <div class="wd_family_section">
+                                <h2>William Family</h2>
+                                <div id="owl_woman_family" class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="wd_family_member">
+                                            <img class="img-responsive" src="http://placehold.it/155x155" alt=""/>
+                                            <h3>Bill Swan</h3>
+                                            <h4>Father</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wd_family_member">
+                                            <img class="img-responsive" src="http://placehold.it/155x155" alt=""/>
+                                            <h3>Christena Swan</h3>
+                                            <h4>Mother</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wd_family_member">
+                                           <img class="img-responsive" src="http://placehold.it/155x155" alt=""/>
+                                            <h3>Max Swan</h3>
+                                            <h4>Brother</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wd_family_member">
+                                            <img class="img-responsive" src="http://placehold.it/155x155" alt=""/>
+                                            <h3>Marry Swan</h3>
+                                            <h4>Sister</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FAMILY SECTION END -->
+
+                <!-- FOOTER SECTION START -->
+                <div class="wd_footer_section">
+                    <div class="container text-center">
+                        <ul class="wd_social_icons">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                        <p> &#169; 2016 Perfect Wedding - Design by Himanshusofttech</p>
+                    </div>
+                </div>
+                <!-- FOOTER SECTION END -->
             </div>
-            <!--End container-->
-         </footer>
-         <!-- <section class="footer-copyright spacer-double-sm bg-white text-center">
-            <p class="text-uppercase small text-muted mb-0">&copy; 2019 all right reserved - a product of mutationthemes.</p>
-         </section> -->
-         <!--To the top-->
-         <a class="scroll-to-top scroll" href="#wrapper">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 273.1091 238.2098" enable-background="new 0 0 273.1091 238.2098" xml:space="preserve">
-               <path fill="#E25D5D" d="M136.7428,23.457L136.7428,23.457C105.6324-7.6197,55.2286-7.8699,23.8161,23.0177
-                  c-31.6835,31.1545-31.6582,82.277-0.501,113.9287l90.7191,92.1591c11.8174,12.005,31.1293,12.1571,43.1343,0.3396l91.6648-90.2325
-                  c31.6726-31.1777,32.5645-83.0754,1.4308-114.7912C219.1893-7.2342,168.3452-7.6516,136.7428,23.457z" />
-               <path fill="#FFFFFF" d="M110.7149,123.5662l-2.9542-2.9542c-1.2509-1.2509-1.2509-3.2736,0-4.5112l25.8562-25.8695
-                  c1.2509-1.2509,3.2736-1.2509,4.5112,0l25.8562,25.8562c1.2509,1.2509,1.2509,3.2736,0,4.5112l-2.9542,2.9542
-                  c-1.2642,1.2642-3.3268,1.2376-4.5644-0.0532l-15.2635-16.0221v38.2454c0,1.7699-1.4239,3.1938-3.1938,3.1938H133.75
-                  c-1.7699,0-3.1938-1.4239-3.1938-3.1938v-38.2454l-15.2769,16.0354C114.0418,124.8171,111.9791,124.8437,110.7149,123.5662z" />
-            </svg>
-         </a>
-         <!-- End to the top -->
-      </div>
-      <!-- End wrapper-->
-      <!--Javascript-->
-      <script src="<?php echo base_url() ?>assets/js/jquery-1.12.4.min.js"></script>
-      <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
-      <script src="<?php echo base_url() ?>assets/js/smooth-scroll.js"></script>
-      <script src="<?php echo base_url() ?>assets/js/jquery.magnific-popup.min.js"></script>
-      <script src="<?php echo base_url() ?>assets/js/jquery.countdown.min.js"></script>
-      <script src="<?php echo base_url() ?>assets/js/placeholders.min.js"></script>
-      <script src="<?php echo base_url() ?>assets/js/instafeed.min.js"></script>
-      <script src="<?php echo base_url() ?>assets/js/script.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-      
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
-         AOS.init({
-            duration:1200
-         });
-      </script>
-      
-      <!-- <script type="text/javascript" src="<?php //echo base_url() ?>assets/scrolling-animation/jquery.parallax.js"></script>
-      <script type="text/javascript">
-         $('.animasi').parallax({mode:1});
-         function custom_show(obj, mode) {
-            obj.children().addClass('animation animation_'+mode);
+        </div>
+    </div>
+    <script src="<?php echo base_url() ?>assets/js/jquery.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/animation-bubble.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/flipclock/flipclock.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/smoothscroll/smoothscroll.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/revolution/js/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/fancybox/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/plugins/countto/jquery.countTo.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/plugins/smoothscroll/smoothscroll.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>assets/js/plugins/owl/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url() ?>assets/js/plugins/rsvp/modernizr.custom.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/plugins/rsvp/classie.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/plugins/rsvp/step_form.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/jquery.easing.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/plugins/stellar/jquery.stellar.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/plugins/rsvp/modernizr.hover.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/js/custom.js"></script>
+
+    <script>
+         var clock1;
+         var futureDate = new Date("Aug 30, 2022 05:02 PM EST");
+         var currentDate = new Date();
+
+         // Calculate the difference in seconds between the future and current date
+         var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+         // Calculate day difference and apply class to .clock for extra digit styling.
+         function dayDiff(first, second) {
+               return (second - first) / (1000 * 60 * 60 * 24);
          }
-      </script> -->
-      <script>
-         $( document ).ready(function() {
-            $('#submit-registry').click(function(){
-               // console.log('hahaha')
 
-               const rbs = document.querySelectorAll('input[name="atttending"]');
-               let selectedValue;
-               for (const rb of rbs) {
-                  if (rb.checked) {
-                     selectedValue = rb.value;
-                     break;
-                  }
-               }
-               
-               var nama = $('#nama').val()
-               var alamat = $('#alamat').val()
-               var email = $('#email').val()
+         if (dayDiff(currentDate, futureDate) < 100) {
+               $('.clock1').addClass('twoDayDigits');
+         } else {
+               $('.clock1').addClass('threeDayDigits');
+         }
 
-               $.ajax({ 
-                  url : "<?php echo site_url('wedding/konfirmasi_kehadiran')?>",
-                  type: "POST",
-                  dataType: "JSON",
-                  data : {nama:nama, alamat:alamat, email:email, kehadiran:selectedValue},
-                  success: function(data){
-                     if(data.status == false){
-                        if(data.errors.name_error != ''){
-                           $('#nama_error').html(data.errors.nama_error);
-                        }else{
-                           $('#nama_error').html('');
-                        }
-                        if(data.errors.email_error != ''){
-                           $('#email_error').html(data.errors.email_error);
-                        }else{
-                           $('#email_error').html('');
-                        }
-                        if(data.errors.alamat_error != ''){
-                           $('#alamat_error').html(data.errors.alamat_error);
-                        }else{
-                           $('#alamat_error').html('');
-                        }
-                        if(data.errors.kehadiran_error != ''){
-                           $('#kehadiran_error').html(data.errors.kehadiran_error);
-                        }else{
-                           $('#kehadiran_error').html('');
-                        }
-                     }else{
-                        swal(data.ket)
-                        $('#nama').val('')
-                        $('#alamat').val('')
-                        $('#email').val('')
-                        $('input[name="atttending"]').prop('checked',false);
-                     }
+         if (diff < 0) {
+               diff = 0;
+         }
 
-                  }
-               })
-            })
-         })
-      </script>
-   </body>
+         // Instantiate a coutdown FlipClock
+         clock1 = $('.clock1').FlipClock(diff, {
+               clockFace: 'DailyCounter',
+               countdown: true
+         });
+    </script>
+</body>
+
 </html>
-
