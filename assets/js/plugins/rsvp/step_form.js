@@ -299,7 +299,9 @@ if ( typeof define === 'function' && define.amd ) {
 			}			
 		}
 		if(validation === 'number'){
-			var re = /^\d{10}$/;
+			// /^(\d{4}|\d{6})$/
+			var re = /^\d+$/;
+			
 			if (!re.test(input)){
 				this._showError( 'NUMBER' );
 				return false;

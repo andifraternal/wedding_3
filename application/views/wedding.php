@@ -462,8 +462,8 @@ Purchase: http://themeforest.net/user/kamleshyadav
                         </div>
                         <div class="wd_rsvp_section">
                             <form id="theForm" class="simform" autocomplete="off" action="" method="post">
-                                <input type="hidden" name="recipient" value="upasana.jain@himanshusofttech.com">
-                                <input type="hidden" name="subject" value="Wedding Planner" />
+                                <!-- <input type="hidden" name="recipient" value="upasana.jain@himanshusofttech.com"> -->
+                                <!-- <input type="hidden" name="subject" value="Wedding Planner" /> -->
                                 <div class="simform-inner">
                                     <ol class="questions">
                                         <li>
@@ -674,6 +674,66 @@ Purchase: http://themeforest.net/user/kamleshyadav
                countdown: true
          });
     </script>
+
+
+<script>
+         $( document ).ready(function() {
+            $('#submit-registry').click(function(){
+               // console.log('hahaha')
+
+               const rbs = document.querySelectorAll('input[name="atttending"]');
+               let selectedValue;
+               for (const rb of rbs) {
+                  if (rb.checked) {
+                     selectedValue = rb.value;
+                     break;
+                  }
+               }
+               
+               var nama = $('#nama').val()
+               var alamat = $('#alamat').val()
+               var email = $('#email').val()
+
+               $.ajax({ 
+                  url : "<?php echo site_url('wedding/konfirmasi_kehadiran')?>",
+                  type: "POST",
+                  dataType: "JSON",
+                  data : {nama:nama, alamat:alamat, email:email, kehadiran:selectedValue},
+                  success: function(data){
+                     if(data.status == false){
+                        if(data.errors.name_error != ''){
+                           $('#nama_error').html(data.errors.nama_error);
+                        }else{
+                           $('#nama_error').html('');
+                        }
+                        if(data.errors.email_error != ''){
+                           $('#email_error').html(data.errors.email_error);
+                        }else{
+                           $('#email_error').html('');
+                        }
+                        if(data.errors.alamat_error != ''){
+                           $('#alamat_error').html(data.errors.alamat_error);
+                        }else{
+                           $('#alamat_error').html('');
+                        }
+                        if(data.errors.kehadiran_error != ''){
+                           $('#kehadiran_error').html(data.errors.kehadiran_error);
+                        }else{
+                           $('#kehadiran_error').html('');
+                        }
+                     }else{
+                        swal(data.ket)
+                        $('#nama').val('')
+                        $('#alamat').val('')
+                        $('#email').val('')
+                        $('input[name="atttending"]').prop('checked',false);
+                     }
+
+                  }
+               })
+            })
+         })
+      </script>
 </body>
 
 </html>
