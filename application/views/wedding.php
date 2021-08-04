@@ -12,7 +12,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Wedding - Wedding Invite Template</title>
+    <title>Wedding 3</title>
     <link href="<?php echo base_url() ?>assets/css/main.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/png" href="<?php echo base_url() ?>assets/images/favicon.png" />
     <link rel="icon" type="image/png" href="<?php echo base_url() ?>assets/images/favicon.png" />
@@ -66,7 +66,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
             <li><a class="page-scroll" href='#3'><i class="icon fa fa-heart fa-2x"></i>Wedding</a></li>
             <li><a class="page-scroll" href='#4'><i class="icon fa fa-heart fa-2x"></i>Gallery</a></li>
             <li><a class="page-scroll" href='#5'><i class="icon fa fa-heart fa-2x"></i>RSVP</a></li>
-            <li><a class="page-scroll" href='#6'><i class="icon fa fa-heart fa-2x"></i>Location</a></li>
+            <li><a class="page-scroll" href='#6'><i class="icon fa fa-heart fa-2x"></i>Keluarga Kami</a></li>
         </ul>
         <div class="content">
             <div class="content_inner">
@@ -462,30 +462,36 @@ Purchase: http://themeforest.net/user/kamleshyadav
                         </div>
                         <div class="wd_rsvp_section">
                             <form id="theForm" class="simform" autocomplete="off" action="" method="post">
-                                <!-- <input type="hidden" name="recipient" value="upasana.jain@himanshusofttech.com"> -->
-                                <!-- <input type="hidden" name="subject" value="Wedding Planner" /> -->
+                                <input type="hidden" id="base" value="<?php echo base_url(); ?>">
                                 <div class="simform-inner">
                                     <ol class="questions">
                                         <li>
-                                            <span><label for="q1">What's Your Name?</label></span>
-                                            <input id="q1" name="name" type="text" />
+                                            <span><label for="q1">Nama</label></span>
+                                            <input id="q1" name="nama" type="text" />
                                         </li>
                                         <li>
-                                            <span><label for="q2">What's Your Email?</label></span>
+                                            <span><label for="q1">Alamat</label></span>
+                                            <input id="q1" name="alamat" type="text" />
+                                        </li>
+                                        <li>
+                                            <span><label for="q2">Email</label></span>
                                             <input id="q2" name="email" type="text" data-validate="email" />
                                         </li>
                                         <li>
-                                            <span><label for="q3">What's Your Mobile Number?</label></span>
-                                            <input id="q3" name="mobile_no" type="text" data-validate="number" />
+                                            <span><label for="q3">Akan Menghardiri?</label></span>
+                                            <input id="q3" name="kehadiran" type="text"  />
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <span><label for="q4">No. Of Members?</label></span>
                                             <input id="q4" name="no_of_member" type="text" data-validate="mnumber" />
-                                        </li>
-                                        <li>
+                                        </li> -->
+                                        <!-- <li>
                                             <span><label for="q5">Will Attent Event(Ceremony,Wedding,Party)</label></span>
-                                            <input id="q5" name="events" type="text" />
-                                        </li>
+                                            <select name="kehadiran" id="kehadiran" style="width:30%; margin-left:30%; margin-right:30%; border:0px; background-color:#f5f5f5">
+                                                <option value="Y">Hadir</option>
+                                                <option value="N">Tidak</option>
+                                            </select>
+                                        </li> -->
                                     </ol>
                                     <!-- /questions -->
                                     <button class="submit" type="submit">Send answers</button>
@@ -676,64 +682,7 @@ Purchase: http://themeforest.net/user/kamleshyadav
     </script>
 
 
-<script>
-         $( document ).ready(function() {
-            $('#submit-registry').click(function(){
-               // console.log('hahaha')
 
-               const rbs = document.querySelectorAll('input[name="atttending"]');
-               let selectedValue;
-               for (const rb of rbs) {
-                  if (rb.checked) {
-                     selectedValue = rb.value;
-                     break;
-                  }
-               }
-               
-               var nama = $('#nama').val()
-               var alamat = $('#alamat').val()
-               var email = $('#email').val()
-
-               $.ajax({ 
-                  url : "<?php echo site_url('wedding/konfirmasi_kehadiran')?>",
-                  type: "POST",
-                  dataType: "JSON",
-                  data : {nama:nama, alamat:alamat, email:email, kehadiran:selectedValue},
-                  success: function(data){
-                     if(data.status == false){
-                        if(data.errors.name_error != ''){
-                           $('#nama_error').html(data.errors.nama_error);
-                        }else{
-                           $('#nama_error').html('');
-                        }
-                        if(data.errors.email_error != ''){
-                           $('#email_error').html(data.errors.email_error);
-                        }else{
-                           $('#email_error').html('');
-                        }
-                        if(data.errors.alamat_error != ''){
-                           $('#alamat_error').html(data.errors.alamat_error);
-                        }else{
-                           $('#alamat_error').html('');
-                        }
-                        if(data.errors.kehadiran_error != ''){
-                           $('#kehadiran_error').html(data.errors.kehadiran_error);
-                        }else{
-                           $('#kehadiran_error').html('');
-                        }
-                     }else{
-                        swal(data.ket)
-                        $('#nama').val('')
-                        $('#alamat').val('')
-                        $('#email').val('')
-                        $('input[name="atttending"]').prop('checked',false);
-                     }
-
-                  }
-               })
-            })
-         })
-      </script>
 </body>
 
 </html>

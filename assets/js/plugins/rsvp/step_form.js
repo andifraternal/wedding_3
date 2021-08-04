@@ -364,12 +364,15 @@ var theForm = document.getElementById( 'theForm' );
 					var formdata = $( form ).serialize();
 					console.log(formdata);
 					
+					// var base_url = window.location.origin;
+					// <?php echo site_url('wedding/konfirmasi_kehadiran')?>
+					var base_url = $('#base').val();
 					$.ajax({
 						type : "post",
-						url : 'http://hostingsites.co.in/developer3/wedding/mail.php',
+						url : base_url+'/wedding/konfirmasi_kehadiran',
 						data : formdata, 
 						success: function(response) {
-							alert(response);
+							alert(response.ket);
 						}
 					});
 					

@@ -20,22 +20,22 @@ class Wedding extends CI_Controller{
 
     function konfirmasi_kehadiran(){
         header('Content-type:application/json');
-        $this->validasi();
+        // $this->validasi();
         $nama = $this->input->post('nama');
         $alamat = $this->input->post('alamat');
         $email = $this->input->post('email');
         $kehadiran = $this->input->post('kehadiran');
 
         $tanggal = date('Y-m-d H:i:s');
-        if( $this->form_validation->run() === FALSE ){
-            $data['status'] = false;
-			$data['errors'] = [
-				'nama_error' 	    => form_error('nama'),
-				'alamat_error' 	    => form_error('alamat'),
-				'email_error' 	    => form_error('email'),
-				'kehadiran_error'   => form_error('kehadiran'),
-			];
-        }else{
+        // if( $this->form_validation->run() === FALSE ){
+        //     $data['status'] = false;
+		// 	$data['errors'] = [
+		// 		'nama_error' 	    => form_error('nama'),
+		// 		'alamat_error' 	    => form_error('alamat'),
+		// 		'email_error' 	    => form_error('email'),
+		// 		'kehadiran_error'   => form_error('kehadiran'),
+		// 	];
+        // }else{
             $insert = $this->buku_tamu_model->insert_data($nama, $alamat, $email, $kehadiran, $tanggal);
 
             if($insert){
@@ -51,10 +51,10 @@ class Wedding extends CI_Controller{
             }
     
             $data = array(
-                'success'          => $status,
+                'status'          => $status,
                 'ket'              => $ket
             );
-        }
+        // }
         
 
         echo json_encode($data);
